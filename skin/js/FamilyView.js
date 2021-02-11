@@ -263,6 +263,7 @@ $(document).ready(function () {
             message: '<p style="color: red">' + popupMessage + '</p>',
             callback: function (result) {
                 if (result) {
+                    alert("RESULT"+result);
                     window.CRM.APIRequest({
                         method: "POST",
                         path: "families/" + window.CRM.currentFamily + "/activate/" + !window.CRM.currentActive

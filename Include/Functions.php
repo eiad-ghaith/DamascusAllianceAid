@@ -30,9 +30,13 @@ $_SESSION['sSoftwareInstalledVersion'] = SystemService::getInstalledVersion();
 use Gettext\Loader\PoLoader;
 use Gettext\Translation;
 use Gettext\Translations;
+use ChurchCRM\dto\SystemURLs;
+
 
 $GLOBALS['loader']  = new PoLoader();
-$GLOBALS['translations']  = $GLOBALS['loader']->loadFile('C:\xampp\htdocs\churchcrm\locale\textdomain\ar_EG\LC_MESSAGES\messages.po');
+$dst = SystemURLs::getDocumentRoot() . '\locale\textdomain\ar_EG\LC_MESSAGES\messages.po';
+
+$GLOBALS['translations']  = $GLOBALS['loader']->loadFile($dst);
   
 
 function getTranslation($msg){
