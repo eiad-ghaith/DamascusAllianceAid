@@ -8,7 +8,30 @@ use ChurchCRM\dto\SystemURLs;
 use ChurchCRM\Service\TaskService;
 use ChurchCRM\view\MenuRenderer;
 
+
+///////////////////////////////
+use Gettext\Loader\PoLoader;
+use Gettext\Translation;
+use Gettext\Translations;
+
+$GLOBALS['loader']  = new PoLoader();
+$GLOBALS['translations']  = $GLOBALS['loader']->loadFile('C:\xampp\htdocs\churchcrm\locale\textdomain\ar_EG\LC_MESSAGES\messages.po');
+  
+
+function getTranslation($msg){
+
+
+    $translation = $GLOBALS['translations']->find(NULL, $msg);
+    if ($translation) {
+        return  $translation->getTranslation();
+    }
+    
+}
+
+///////////////////////////////
+
 $taskService = new TaskService();
+
 
 //
 // Turn ON output buffering

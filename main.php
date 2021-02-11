@@ -1,29 +1,21 @@
 <?php
 
+// use Gettext\Loader\PoLoader;
+// use Gettext\Translation;
+// // use Gettext\Generator\MoGenerator;
+// use Gettext\Translations;
 
-use Gettext\Loader\PoLoader;
-use Gettext\Translation;
-use Gettext\Generator\MoGenerator;
-use Gettext\Translations;
+// function getTranslation($msg){
 
-//import from a .po file:
-$loader = new PoLoader();
-$translations = $loader->loadFile('locale\textdomain\ar_EG\LC_MESSAGES\messages.po');
+//     $loader = new PoLoader();
 
-//edit some translations:
-$translation = $translations->find(NULL, 'Updated Families');
-// print
-
-if ($translation) {
-
-    echo $translation->getTranslation(); // Un comentario
-   
-   //print_r( $translation->translate('Updated Families'));
-//    $translation->translate('Un comentario');
-//    echo $translation->getTranslation(); // Un comentario
-   exit;
-    // $translation->translate('Mazá');
-}
-
+//     $translations = $loader->loadFile('C:\xampp\htdocs\churchcrm\locale\textdomain\ar_EG\LC_MESSAGES\messages.po');
+      
+//     $translation = $translations->find(NULL, $msg);
+//     if ($translation) {
+//         return  $translation->getTranslation();
+//     }
+    
+// }
 
 ?>

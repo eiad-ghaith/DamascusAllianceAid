@@ -1,0 +1,944 @@
+[10-Feb-2021 23:05:59 UTC] Slim Application Error:
+Type: Error
+Message: Call to undefined function getTranslation()
+File: C:\xampp\htdocs\churchcrm\v2\templates\root\dashboard.php
+Line: 10
+Trace: #0 C:\xampp\htdocs\churchcrm\vendor\slim\php-view\src\PhpRenderer.php(203): include()
+#1 C:\xampp\htdocs\churchcrm\vendor\slim\php-view\src\PhpRenderer.php(184): Slim\Views\PhpRenderer->protectedIncludeScope('templates/root/...', Array)
+#2 C:\xampp\htdocs\churchcrm\vendor\slim\php-view\src\PhpRenderer.php(153): Slim\Views\PhpRenderer->fetchTemplate('dashboard.php', Array)
+#3 C:\xampp\htdocs\churchcrm\vendor\slim\php-view\src\PhpRenderer.php(54): Slim\Views\PhpRenderer->fetch('dashboard.php', Array, true)
+#4 C:\xampp\htdocs\churchcrm\v2\routes\root.php(60): Slim\Views\PhpRenderer->render(Object(Slim\Http\Response), 'dashboard.php', Array)
+#5 [internal function]: viewDashboard(Object(Slim\Http\Request), Object(Slim\Http\Response), Array)
+#6 C:\xampp\htdocs\churchcrm\vendor\slim\slim\Slim\Handlers\Strategies\RequestResponse.php(40): call_user_func('viewDashboard', Object(Slim\Http\Request), Object(Slim\Http\Response), Array)
+#7 C:\xampp\htdocs\churchcrm\vendor\slim\slim\Slim\Route.php(281): Slim\Handlers\Strategies\RequestResponse->__invoke('viewDashboard', Object(Slim\Http\Request), Object(Slim\Http\Response), Array)
+#8 C:\xampp\htdocs\churchcrm\vendor\slim\slim\Slim\MiddlewareAwareTrait.php(117): Slim\Route->__invoke(Object(Slim\Http\Request), Object(Slim\Http\Response))
+#9 C:\xampp\htdocs\churchcrm\vendor\slim\slim\Slim\Route.php(268): Slim\Route->callMiddlewareStack(Object(Slim\Http\Request), Object(Slim\Http\Response))
+#10 C:\xampp\htdocs\churchcrm\vendor\slim\slim\Slim\App.php(503): Slim\Route->run(Object(Slim\Http\Request), Object(Slim\Http\Response))
+#11 C:\xampp\htdocs\churchcrm\ChurchCRM\Slim\Middleware\VersionMiddleware.php(13): Slim\App->__invoke(Object(Slim\Http\Request), Object(Slim\Http\Response))
+#12 [internal function]: ChurchCRM\Slim\Middleware\VersionMiddleware->__invoke(Object(Slim\Http\Request), Object(Slim\Http\Response), Object(Slim\App))
+#13 C:\xampp\htdocs\churchcrm\vendor\slim\slim\Slim\DeferredCallable.php(57): call_user_func_array(Object(ChurchCRM\Slim\Middleware\VersionMiddleware), Array)
+#14 [internal function]: Slim\DeferredCallable->__invoke(Object(Slim\Http\Request), Object(Slim\Http\Response), Object(Slim\App))
+#15 C:\xampp\htdocs\churchcrm\vendor\slim\slim\Slim\MiddlewareAwareTrait.php(70): call_user_func(Object(Slim\DeferredCallable), Object(Slim\Http\Request), Object(Slim\Http\Response), Object(Slim\App))
+#16 C:\xampp\htdocs\churchcrm\ChurchCRM\Slim\Middleware\AuthMiddleware.php(34): Slim\App->Slim\{closure}(Object(Slim\Http\Request), Object(Slim\Http\Response))
+#17 [internal function]: ChurchCRM\Slim\Middleware\AuthMiddleware->__invoke(Object(Slim\Http\Request), Object(Slim\Http\Response), Object(Closure))
+#18 C:\xampp\htdocs\churchcrm\vendor\slim\slim\Slim\DeferredCallable.php(57): call_user_func_array(Object(ChurchCRM\Slim\Middleware\AuthMiddleware), Array)
+#19 [internal function]: Slim\DeferredCallable->__invoke(Object(Slim\Http\Request), Object(Slim\Http\Response), Object(Closure))
+#20 C:\xampp\htdocs\churchcrm\vendor\slim\slim\Slim\MiddlewareAwareTrait.php(70): call_user_func(Object(Slim\DeferredCallable), Object(Slim\Http\Request), Object(Slim\Http\Response), Object(Closure))
+#21 C:\xampp\htdocs\churchcrm\vendor\slim\slim\Slim\MiddlewareAwareTrait.php(117): Slim\App->Slim\{closure}(Object(Slim\Http\Request), Object(Slim\Http\Response))
+#22 C:\xampp\htdocs\churchcrm\vendor\slim\slim\Slim\App.php(392): Slim\App->callMiddlewareStack(Object(Slim\Http\Request), Object(Slim\Http\Response))
+#23 C:\xampp\htdocs\churchcrm\vendor\slim\slim\Slim\App.php(297): Slim\App->process(Object(Slim\Http\Request), Object(Slim\Http\Response))
+#24 C:\xampp\htdocs\churchcrm\v2\index.php(48): Slim\App->run()
+#25 {main}
+View in rendered output by enabling the "displayErrorDetails" setting.
+
+[10-Feb-2021 23:07:01 UTC] Slim Application Error:
+Type: Error
+Message: Call to undefined function getTranslation()
+File: C:\xampp\htdocs\churchcrm\v2\templates\root\dashboard.php
+Line: 10
+Trace: #0 C:\xampp\htdocs\churchcrm\vendor\slim\php-view\src\PhpRenderer.php(203): include()
+#1 C:\xampp\htdocs\churchcrm\vendor\slim\php-view\src\PhpRenderer.php(184): Slim\Views\PhpRenderer->protectedIncludeScope('templates/root/...', Array)
+#2 C:\xampp\htdocs\churchcrm\vendor\slim\php-view\src\PhpRenderer.php(153): Slim\Views\PhpRenderer->fetchTemplate('dashboard.php', Array)
+#3 C:\xampp\htdocs\churchcrm\vendor\slim\php-view\src\PhpRenderer.php(54): Slim\Views\PhpRenderer->fetch('dashboard.php', Array, true)
+#4 C:\xampp\htdocs\churchcrm\v2\routes\root.php(60): Slim\Views\PhpRenderer->render(Object(Slim\Http\Response), 'dashboard.php', Array)
+#5 [internal function]: viewDashboard(Object(Slim\Http\Request), Object(Slim\Http\Response), Array)
+#6 C:\xampp\htdocs\churchcrm\vendor\slim\slim\Slim\Handlers\Strategies\RequestResponse.php(40): call_user_func('viewDashboard', Object(Slim\Http\Request), Object(Slim\Http\Response), Array)
+#7 C:\xampp\htdocs\churchcrm\vendor\slim\slim\Slim\Route.php(281): Slim\Handlers\Strategies\RequestResponse->__invoke('viewDashboard', Object(Slim\Http\Request), Object(Slim\Http\Response), Array)
+#8 C:\xampp\htdocs\churchcrm\vendor\slim\slim\Slim\MiddlewareAwareTrait.php(117): Slim\Route->__invoke(Object(Slim\Http\Request), Object(Slim\Http\Response))
+#9 C:\xampp\htdocs\churchcrm\vendor\slim\slim\Slim\Route.php(268): Slim\Route->callMiddlewareStack(Object(Slim\Http\Request), Object(Slim\Http\Response))
+#10 C:\xampp\htdocs\churchcrm\vendor\slim\slim\Slim\App.php(503): Slim\Route->run(Object(Slim\Http\Request), Object(Slim\Http\Response))
+#11 C:\xampp\htdocs\churchcrm\ChurchCRM\Slim\Middleware\VersionMiddleware.php(13): Slim\App->__invoke(Object(Slim\Http\Request), Object(Slim\Http\Response))
+#12 [internal function]: ChurchCRM\Slim\Middleware\VersionMiddleware->__invoke(Object(Slim\Http\Request), Object(Slim\Http\Response), Object(Slim\App))
+#13 C:\xampp\htdocs\churchcrm\vendor\slim\slim\Slim\DeferredCallable.php(57): call_user_func_array(Object(ChurchCRM\Slim\Middleware\VersionMiddleware), Array)
+#14 [internal function]: Slim\DeferredCallable->__invoke(Object(Slim\Http\Request), Object(Slim\Http\Response), Object(Slim\App))
+#15 C:\xampp\htdocs\churchcrm\vendor\slim\slim\Slim\MiddlewareAwareTrait.php(70): call_user_func(Object(Slim\DeferredCallable), Object(Slim\Http\Request), Object(Slim\Http\Response), Object(Slim\App))
+#16 C:\xampp\htdocs\churchcrm\ChurchCRM\Slim\Middleware\AuthMiddleware.php(34): Slim\App->Slim\{closure}(Object(Slim\Http\Request), Object(Slim\Http\Response))
+#17 [internal function]: ChurchCRM\Slim\Middleware\AuthMiddleware->__invoke(Object(Slim\Http\Request), Object(Slim\Http\Response), Object(Closure))
+#18 C:\xampp\htdocs\churchcrm\vendor\slim\slim\Slim\DeferredCallable.php(57): call_user_func_array(Object(ChurchCRM\Slim\Middleware\AuthMiddleware), Array)
+#19 [internal function]: Slim\DeferredCallable->__invoke(Object(Slim\Http\Request), Object(Slim\Http\Response), Object(Closure))
+#20 C:\xampp\htdocs\churchcrm\vendor\slim\slim\Slim\MiddlewareAwareTrait.php(70): call_user_func(Object(Slim\DeferredCallable), Object(Slim\Http\Request), Object(Slim\Http\Response), Object(Closure))
+#21 C:\xampp\htdocs\churchcrm\vendor\slim\slim\Slim\MiddlewareAwareTrait.php(117): Slim\App->Slim\{closure}(Object(Slim\Http\Request), Object(Slim\Http\Response))
+#22 C:\xampp\htdocs\churchcrm\vendor\slim\slim\Slim\App.php(392): Slim\App->callMiddlewareStack(Object(Slim\Http\Request), Object(Slim\Http\Response))
+#23 C:\xampp\htdocs\churchcrm\vendor\slim\slim\Slim\App.php(297): Slim\App->process(Object(Slim\Http\Request), Object(Slim\Http\Response))
+#24 C:\xampp\htdocs\churchcrm\v2\index.php(48): Slim\App->run()
+#25 {main}
+View in rendered output by enabling the "displayErrorDetails" setting.
+
+[10-Feb-2021 23:07:05 UTC] Slim Application Error:
+Type: Error
+Message: Call to undefined function getTranslation()
+File: C:\xampp\htdocs\churchcrm\v2\templates\root\dashboard.php
+Line: 10
+Trace: #0 C:\xampp\htdocs\churchcrm\vendor\slim\php-view\src\PhpRenderer.php(203): include()
+#1 C:\xampp\htdocs\churchcrm\vendor\slim\php-view\src\PhpRenderer.php(184): Slim\Views\PhpRenderer->protectedIncludeScope('templates/root/...', Array)
+#2 C:\xampp\htdocs\churchcrm\vendor\slim\php-view\src\PhpRenderer.php(153): Slim\Views\PhpRenderer->fetchTemplate('dashboard.php', Array)
+#3 C:\xampp\htdocs\churchcrm\vendor\slim\php-view\src\PhpRenderer.php(54): Slim\Views\PhpRenderer->fetch('dashboard.php', Array, true)
+#4 C:\xampp\htdocs\churchcrm\v2\routes\root.php(60): Slim\Views\PhpRenderer->render(Object(Slim\Http\Response), 'dashboard.php', Array)
+#5 [internal function]: viewDashboard(Object(Slim\Http\Request), Object(Slim\Http\Response), Array)
+#6 C:\xampp\htdocs\churchcrm\vendor\slim\slim\Slim\Handlers\Strategies\RequestResponse.php(40): call_user_func('viewDashboard', Object(Slim\Http\Request), Object(Slim\Http\Response), Array)
+#7 C:\xampp\htdocs\churchcrm\vendor\slim\slim\Slim\Route.php(281): Slim\Handlers\Strategies\RequestResponse->__invoke('viewDashboard', Object(Slim\Http\Request), Object(Slim\Http\Response), Array)
+#8 C:\xampp\htdocs\churchcrm\vendor\slim\slim\Slim\MiddlewareAwareTrait.php(117): Slim\Route->__invoke(Object(Slim\Http\Request), Object(Slim\Http\Response))
+#9 C:\xampp\htdocs\churchcrm\vendor\slim\slim\Slim\Route.php(268): Slim\Route->callMiddlewareStack(Object(Slim\Http\Request), Object(Slim\Http\Response))
+#10 C:\xampp\htdocs\churchcrm\vendor\slim\slim\Slim\App.php(503): Slim\Route->run(Object(Slim\Http\Request), Object(Slim\Http\Response))
+#11 C:\xampp\htdocs\churchcrm\ChurchCRM\Slim\Middleware\VersionMiddleware.php(13): Slim\App->__invoke(Object(Slim\Http\Request), Object(Slim\Http\Response))
+#12 [internal function]: ChurchCRM\Slim\Middleware\VersionMiddleware->__invoke(Object(Slim\Http\Request), Object(Slim\Http\Response), Object(Slim\App))
+#13 C:\xampp\htdocs\churchcrm\vendor\slim\slim\Slim\DeferredCallable.php(57): call_user_func_array(Object(ChurchCRM\Slim\Middleware\VersionMiddleware), Array)
+#14 [internal function]: Slim\DeferredCallable->__invoke(Object(Slim\Http\Request), Object(Slim\Http\Response), Object(Slim\App))
+#15 C:\xampp\htdocs\churchcrm\vendor\slim\slim\Slim\MiddlewareAwareTrait.php(70): call_user_func(Object(Slim\DeferredCallable), Object(Slim\Http\Request), Object(Slim\Http\Response), Object(Slim\App))
+#16 C:\xampp\htdocs\churchcrm\ChurchCRM\Slim\Middleware\AuthMiddleware.php(34): Slim\App->Slim\{closure}(Object(Slim\Http\Request), Object(Slim\Http\Response))
+#17 [internal function]: ChurchCRM\Slim\Middleware\AuthMiddleware->__invoke(Object(Slim\Http\Request), Object(Slim\Http\Response), Object(Closure))
+#18 C:\xampp\htdocs\churchcrm\vendor\slim\slim\Slim\DeferredCallable.php(57): call_user_func_array(Object(ChurchCRM\Slim\Middleware\AuthMiddleware), Array)
+#19 [internal function]: Slim\DeferredCallable->__invoke(Object(Slim\Http\Request), Object(Slim\Http\Response), Object(Closure))
+#20 C:\xampp\htdocs\churchcrm\vendor\slim\slim\Slim\MiddlewareAwareTrait.php(70): call_user_func(Object(Slim\DeferredCallable), Object(Slim\Http\Request), Object(Slim\Http\Response), Object(Closure))
+#21 C:\xampp\htdocs\churchcrm\vendor\slim\slim\Slim\MiddlewareAwareTrait.php(117): Slim\App->Slim\{closure}(Object(Slim\Http\Request), Object(Slim\Http\Response))
+#22 C:\xampp\htdocs\churchcrm\vendor\slim\slim\Slim\App.php(392): Slim\App->callMiddlewareStack(Object(Slim\Http\Request), Object(Slim\Http\Response))
+#23 C:\xampp\htdocs\churchcrm\vendor\slim\slim\Slim\App.php(297): Slim\App->process(Object(Slim\Http\Request), Object(Slim\Http\Response))
+#24 C:\xampp\htdocs\churchcrm\v2\index.php(48): Slim\App->run()
+#25 {main}
+View in rendered output by enabling the "displayErrorDetails" setting.
+
+[10-Feb-2021 23:11:22 UTC] Slim Application Error:
+Type: ParseError
+Message: syntax error, unexpected 'echo' (T_ECHO)
+File: C:\xampp\htdocs\churchcrm\main.php
+Line: 10
+Trace: #0 C:\xampp\htdocs\churchcrm\vendor\slim\php-view\src\PhpRenderer.php(203): include()
+#1 C:\xampp\htdocs\churchcrm\vendor\slim\php-view\src\PhpRenderer.php(184): Slim\Views\PhpRenderer->protectedIncludeScope('templates/root/...', Array)
+#2 C:\xampp\htdocs\churchcrm\vendor\slim\php-view\src\PhpRenderer.php(153): Slim\Views\PhpRenderer->fetchTemplate('dashboard.php', Array)
+#3 C:\xampp\htdocs\churchcrm\vendor\slim\php-view\src\PhpRenderer.php(54): Slim\Views\PhpRenderer->fetch('dashboard.php', Array, true)
+#4 C:\xampp\htdocs\churchcrm\v2\routes\root.php(60): Slim\Views\PhpRenderer->render(Object(Slim\Http\Response), 'dashboard.php', Array)
+#5 [internal function]: viewDashboard(Object(Slim\Http\Request), Object(Slim\Http\Response), Array)
+#6 C:\xampp\htdocs\churchcrm\vendor\slim\slim\Slim\Handlers\Strategies\RequestResponse.php(40): call_user_func('viewDashboard', Object(Slim\Http\Request), Object(Slim\Http\Response), Array)
+#7 C:\xampp\htdocs\churchcrm\vendor\slim\slim\Slim\Route.php(281): Slim\Handlers\Strategies\RequestResponse->__invoke('viewDashboard', Object(Slim\Http\Request), Object(Slim\Http\Response), Array)
+#8 C:\xampp\htdocs\churchcrm\vendor\slim\slim\Slim\MiddlewareAwareTrait.php(117): Slim\Route->__invoke(Object(Slim\Http\Request), Object(Slim\Http\Response))
+#9 C:\xampp\htdocs\churchcrm\vendor\slim\slim\Slim\Route.php(268): Slim\Route->callMiddlewareStack(Object(Slim\Http\Request), Object(Slim\Http\Response))
+#10 C:\xampp\htdocs\churchcrm\vendor\slim\slim\Slim\App.php(503): Slim\Route->run(Object(Slim\Http\Request), Object(Slim\Http\Response))
+#11 C:\xampp\htdocs\churchcrm\ChurchCRM\Slim\Middleware\VersionMiddleware.php(13): Slim\App->__invoke(Object(Slim\Http\Request), Object(Slim\Http\Response))
+#12 [internal function]: ChurchCRM\Slim\Middleware\VersionMiddleware->__invoke(Object(Slim\Http\Request), Object(Slim\Http\Response), Object(Slim\App))
+#13 C:\xampp\htdocs\churchcrm\vendor\slim\slim\Slim\DeferredCallable.php(57): call_user_func_array(Object(ChurchCRM\Slim\Middleware\VersionMiddleware), Array)
+#14 [internal function]: Slim\DeferredCallable->__invoke(Object(Slim\Http\Request), Object(Slim\Http\Response), Object(Slim\App))
+#15 C:\xampp\htdocs\churchcrm\vendor\slim\slim\Slim\MiddlewareAwareTrait.php(70): call_user_func(Object(Slim\DeferredCallable), Object(Slim\Http\Request), Object(Slim\Http\Response), Object(Slim\App))
+#16 C:\xampp\htdocs\churchcrm\ChurchCRM\Slim\Middleware\AuthMiddleware.php(34): Slim\App->Slim\{closure}(Object(Slim\Http\Request), Object(Slim\Http\Response))
+#17 [internal function]: ChurchCRM\Slim\Middleware\AuthMiddleware->__invoke(Object(Slim\Http\Request), Object(Slim\Http\Response), Object(Closure))
+#18 C:\xampp\htdocs\churchcrm\vendor\slim\slim\Slim\DeferredCallable.php(57): call_user_func_array(Object(ChurchCRM\Slim\Middleware\AuthMiddleware), Array)
+#19 [internal function]: Slim\DeferredCallable->__invoke(Object(Slim\Http\Request), Object(Slim\Http\Response), Object(Closure))
+#20 C:\xampp\htdocs\churchcrm\vendor\slim\slim\Slim\MiddlewareAwareTrait.php(70): call_user_func(Object(Slim\DeferredCallable), Object(Slim\Http\Request), Object(Slim\Http\Response), Object(Closure))
+#21 C:\xampp\htdocs\churchcrm\vendor\slim\slim\Slim\MiddlewareAwareTrait.php(117): Slim\App->Slim\{closure}(Object(Slim\Http\Request), Object(Slim\Http\Response))
+#22 C:\xampp\htdocs\churchcrm\vendor\slim\slim\Slim\App.php(392): Slim\App->callMiddlewareStack(Object(Slim\Http\Request), Object(Slim\Http\Response))
+#23 C:\xampp\htdocs\churchcrm\vendor\slim\slim\Slim\App.php(297): Slim\App->process(Object(Slim\Http\Request), Object(Slim\Http\Response))
+#24 C:\xampp\htdocs\churchcrm\v2\index.php(48): Slim\App->run()
+#25 {main}
+View in rendered output by enabling the "displayErrorDetails" setting.
+
+[10-Feb-2021 23:21:36 UTC] Slim Application Error:
+Type: Error
+Message: Call to a member function find() on null
+File: C:\xampp\htdocs\churchcrm\main.php
+Line: 13
+Trace: #0 C:\xampp\htdocs\churchcrm\v2\templates\root\dashboard.php(25): getTranslation('Families')
+#1 C:\xampp\htdocs\churchcrm\vendor\slim\php-view\src\PhpRenderer.php(203): include('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\churchcrm\vendor\slim\php-view\src\PhpRenderer.php(184): Slim\Views\PhpRenderer->protectedIncludeScope('templates/root/...', Array)
+#3 C:\xampp\htdocs\churchcrm\vendor\slim\php-view\src\PhpRenderer.php(153): Slim\Views\PhpRenderer->fetchTemplate('dashboard.php', Array)
+#4 C:\xampp\htdocs\churchcrm\vendor\slim\php-view\src\PhpRenderer.php(54): Slim\Views\PhpRenderer->fetch('dashboard.php', Array, true)
+#5 C:\xampp\htdocs\churchcrm\v2\routes\root.php(60): Slim\Views\PhpRenderer->render(Object(Slim\Http\Response), 'dashboard.php', Array)
+#6 [internal function]: viewDashboard(Object(Slim\Http\Request), Object(Slim\Http\Response), Array)
+#7 C:\xampp\htdocs\churchcrm\vendor\slim\slim\Slim\Handlers\Strategies\RequestResponse.php(40): call_user_func('viewDashboard', Object(Slim\Http\Request), Object(Slim\Http\Response), Array)
+#8 C:\xampp\htdocs\churchcrm\vendor\slim\slim\Slim\Route.php(281): Slim\Handlers\Strategies\RequestResponse->__invoke('viewDashboard', Object(Slim\Http\Request), Object(Slim\Http\Response), Array)
+#9 C:\xampp\htdocs\churchcrm\vendor\slim\slim\Slim\MiddlewareAwareTrait.php(117): Slim\Route->__invoke(Object(Slim\Http\Request), Object(Slim\Http\Response))
+#10 C:\xampp\htdocs\churchcrm\vendor\slim\slim\Slim\Route.php(268): Slim\Route->callMiddlewareStack(Object(Slim\Http\Request), Object(Slim\Http\Response))
+#11 C:\xampp\htdocs\churchcrm\vendor\slim\slim\Slim\App.php(503): Slim\Route->run(Object(Slim\Http\Request), Object(Slim\Http\Response))
+#12 C:\xampp\htdocs\churchcrm\ChurchCRM\Slim\Middleware\VersionMiddleware.php(13): Slim\App->__invoke(Object(Slim\Http\Request), Object(Slim\Http\Response))
+#13 [internal function]: ChurchCRM\Slim\Middleware\VersionMiddleware->__invoke(Object(Slim\Http\Request), Object(Slim\Http\Response), Object(Slim\App))
+#14 C:\xampp\htdocs\churchcrm\vendor\slim\slim\Slim\DeferredCallable.php(57): call_user_func_array(Object(ChurchCRM\Slim\Middleware\VersionMiddleware), Array)
+#15 [internal function]: Slim\DeferredCallable->__invoke(Object(Slim\Http\Request), Object(Slim\Http\Response), Object(Slim\App))
+#16 C:\xampp\htdocs\churchcrm\vendor\slim\slim\Slim\MiddlewareAwareTrait.php(70): call_user_func(Object(Slim\DeferredCallable), Object(Slim\Http\Request), Object(Slim\Http\Response), Object(Slim\App))
+#17 C:\xampp\htdocs\churchcrm\ChurchCRM\Slim\Middleware\AuthMiddleware.php(34): Slim\App->Slim\{closure}(Object(Slim\Http\Request), Object(Slim\Http\Response))
+#18 [internal function]: ChurchCRM\Slim\Middleware\AuthMiddleware->__invoke(Object(Slim\Http\Request), Object(Slim\Http\Response), Object(Closure))
+#19 C:\xampp\htdocs\churchcrm\vendor\slim\slim\Slim\DeferredCallable.php(57): call_user_func_array(Object(ChurchCRM\Slim\Middleware\AuthMiddleware), Array)
+#20 [internal function]: Slim\DeferredCallable->__invoke(Object(Slim\Http\Request), Object(Slim\Http\Response), Object(Closure))
+#21 C:\xampp\htdocs\churchcrm\vendor\slim\slim\Slim\MiddlewareAwareTrait.php(70): call_user_func(Object(Slim\DeferredCallable), Object(Slim\Http\Request), Object(Slim\Http\Response), Object(Closure))
+#22 C:\xampp\htdocs\churchcrm\vendor\slim\slim\Slim\MiddlewareAwareTrait.php(117): Slim\App->Slim\{closure}(Object(Slim\Http\Request), Object(Slim\Http\Response))
+#23 C:\xampp\htdocs\churchcrm\vendor\slim\slim\Slim\App.php(392): Slim\App->callMiddlewareStack(Object(Slim\Http\Request), Object(Slim\Http\Response))
+#24 C:\xampp\htdocs\churchcrm\vendor\slim\slim\Slim\App.php(297): Slim\App->process(Object(Slim\Http\Request), Object(Slim\Http\Response))
+#25 C:\xampp\htdocs\churchcrm\v2\index.php(48): Slim\App->run()
+#26 {main}
+View in rendered output by enabling the "displayErrorDetails" setting.
+
+[10-Feb-2021 23:21:49 UTC] Slim Application Error:
+Type: Error
+Message: Call to a member function find() on null
+File: C:\xampp\htdocs\churchcrm\main.php
+Line: 13
+Trace: #0 C:\xampp\htdocs\churchcrm\v2\templates\root\dashboard.php(25): getTranslation('Families')
+#1 C:\xampp\htdocs\churchcrm\vendor\slim\php-view\src\PhpRenderer.php(203): include('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\churchcrm\vendor\slim\php-view\src\PhpRenderer.php(184): Slim\Views\PhpRenderer->protectedIncludeScope('templates/root/...', Array)
+#3 C:\xampp\htdocs\churchcrm\vendor\slim\php-view\src\PhpRenderer.php(153): Slim\Views\PhpRenderer->fetchTemplate('dashboard.php', Array)
+#4 C:\xampp\htdocs\churchcrm\vendor\slim\php-view\src\PhpRenderer.php(54): Slim\Views\PhpRenderer->fetch('dashboard.php', Array, true)
+#5 C:\xampp\htdocs\churchcrm\v2\routes\root.php(60): Slim\Views\PhpRenderer->render(Object(Slim\Http\Response), 'dashboard.php', Array)
+#6 [internal function]: viewDashboard(Object(Slim\Http\Request), Object(Slim\Http\Response), Array)
+#7 C:\xampp\htdocs\churchcrm\vendor\slim\slim\Slim\Handlers\Strategies\RequestResponse.php(40): call_user_func('viewDashboard', Object(Slim\Http\Request), Object(Slim\Http\Response), Array)
+#8 C:\xampp\htdocs\churchcrm\vendor\slim\slim\Slim\Route.php(281): Slim\Handlers\Strategies\RequestResponse->__invoke('viewDashboard', Object(Slim\Http\Request), Object(Slim\Http\Response), Array)
+#9 C:\xampp\htdocs\churchcrm\vendor\slim\slim\Slim\MiddlewareAwareTrait.php(117): Slim\Route->__invoke(Object(Slim\Http\Request), Object(Slim\Http\Response))
+#10 C:\xampp\htdocs\churchcrm\vendor\slim\slim\Slim\Route.php(268): Slim\Route->callMiddlewareStack(Object(Slim\Http\Request), Object(Slim\Http\Response))
+#11 C:\xampp\htdocs\churchcrm\vendor\slim\slim\Slim\App.php(503): Slim\Route->run(Object(Slim\Http\Request), Object(Slim\Http\Response))
+#12 C:\xampp\htdocs\churchcrm\ChurchCRM\Slim\Middleware\VersionMiddleware.php(13): Slim\App->__invoke(Object(Slim\Http\Request), Object(Slim\Http\Response))
+#13 [internal function]: ChurchCRM\Slim\Middleware\VersionMiddleware->__invoke(Object(Slim\Http\Request), Object(Slim\Http\Response), Object(Slim\App))
+#14 C:\xampp\htdocs\churchcrm\vendor\slim\slim\Slim\DeferredCallable.php(57): call_user_func_array(Object(ChurchCRM\Slim\Middleware\VersionMiddleware), Array)
+#15 [internal function]: Slim\DeferredCallable->__invoke(Object(Slim\Http\Request), Object(Slim\Http\Response), Object(Slim\App))
+#16 C:\xampp\htdocs\churchcrm\vendor\slim\slim\Slim\MiddlewareAwareTrait.php(70): call_user_func(Object(Slim\DeferredCallable), Object(Slim\Http\Request), Object(Slim\Http\Response), Object(Slim\App))
+#17 C:\xampp\htdocs\churchcrm\ChurchCRM\Slim\Middleware\AuthMiddleware.php(34): Slim\App->Slim\{closure}(Object(Slim\Http\Request), Object(Slim\Http\Response))
+#18 [internal function]: ChurchCRM\Slim\Middleware\AuthMiddleware->__invoke(Object(Slim\Http\Request), Object(Slim\Http\Response), Object(Closure))
+#19 C:\xampp\htdocs\churchcrm\vendor\slim\slim\Slim\DeferredCallable.php(57): call_user_func_array(Object(ChurchCRM\Slim\Middleware\AuthMiddleware), Array)
+#20 [internal function]: Slim\DeferredCallable->__invoke(Object(Slim\Http\Request), Object(Slim\Http\Response), Object(Closure))
+#21 C:\xampp\htdocs\churchcrm\vendor\slim\slim\Slim\MiddlewareAwareTrait.php(70): call_user_func(Object(Slim\DeferredCallable), Object(Slim\Http\Request), Object(Slim\Http\Response), Object(Closure))
+#22 C:\xampp\htdocs\churchcrm\vendor\slim\slim\Slim\MiddlewareAwareTrait.php(117): Slim\App->Slim\{closure}(Object(Slim\Http\Request), Object(Slim\Http\Response))
+#23 C:\xampp\htdocs\churchcrm\vendor\slim\slim\Slim\App.php(392): Slim\App->callMiddlewareStack(Object(Slim\Http\Request), Object(Slim\Http\Response))
+#24 C:\xampp\htdocs\churchcrm\vendor\slim\slim\Slim\App.php(297): Slim\App->process(Object(Slim\Http\Request), Object(Slim\Http\Response))
+#25 C:\xampp\htdocs\churchcrm\v2\index.php(48): Slim\App->run()
+#26 {main}
+View in rendered output by enabling the "displayErrorDetails" setting.
+
+[10-Feb-2021 23:23:04 UTC] Slim Application Error:
+Type: Error
+Message: Call to a member function find() on null
+File: C:\xampp\htdocs\churchcrm\main.php
+Line: 13
+Trace: #0 C:\xampp\htdocs\churchcrm\v2\templates\root\dashboard.php(10): getTranslation('Families')
+#1 C:\xampp\htdocs\churchcrm\vendor\slim\php-view\src\PhpRenderer.php(203): include('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\churchcrm\vendor\slim\php-view\src\PhpRenderer.php(184): Slim\Views\PhpRenderer->protectedIncludeScope('templates/root/...', Array)
+#3 C:\xampp\htdocs\churchcrm\vendor\slim\php-view\src\PhpRenderer.php(153): Slim\Views\PhpRenderer->fetchTemplate('dashboard.php', Array)
+#4 C:\xampp\htdocs\churchcrm\vendor\slim\php-view\src\PhpRenderer.php(54): Slim\Views\PhpRenderer->fetch('dashboard.php', Array, true)
+#5 C:\xampp\htdocs\churchcrm\v2\routes\root.php(60): Slim\Views\PhpRenderer->render(Object(Slim\Http\Response), 'dashboard.php', Array)
+#6 [internal function]: viewDashboard(Object(Slim\Http\Request), Object(Slim\Http\Response), Array)
+#7 C:\xampp\htdocs\churchcrm\vendor\slim\slim\Slim\Handlers\Strategies\RequestResponse.php(40): call_user_func('viewDashboard', Object(Slim\Http\Request), Object(Slim\Http\Response), Array)
+#8 C:\xampp\htdocs\churchcrm\vendor\slim\slim\Slim\Route.php(281): Slim\Handlers\Strategies\RequestResponse->__invoke('viewDashboard', Object(Slim\Http\Request), Object(Slim\Http\Response), Array)
+#9 C:\xampp\htdocs\churchcrm\vendor\slim\slim\Slim\MiddlewareAwareTrait.php(117): Slim\Route->__invoke(Object(Slim\Http\Request), Object(Slim\Http\Response))
+#10 C:\xampp\htdocs\churchcrm\vendor\slim\slim\Slim\Route.php(268): Slim\Route->callMiddlewareStack(Object(Slim\Http\Request), Object(Slim\Http\Response))
+#11 C:\xampp\htdocs\churchcrm\vendor\slim\slim\Slim\App.php(503): Slim\Route->run(Object(Slim\Http\Request), Object(Slim\Http\Response))
+#12 C:\xampp\htdocs\churchcrm\ChurchCRM\Slim\Middleware\VersionMiddleware.php(13): Slim\App->__invoke(Object(Slim\Http\Request), Object(Slim\Http\Response))
+#13 [internal function]: ChurchCRM\Slim\Middleware\VersionMiddleware->__invoke(Object(Slim\Http\Request), Object(Slim\Http\Response), Object(Slim\App))
+#14 C:\xampp\htdocs\churchcrm\vendor\slim\slim\Slim\DeferredCallable.php(57): call_user_func_array(Object(ChurchCRM\Slim\Middleware\VersionMiddleware), Array)
+#15 [internal function]: Slim\DeferredCallable->__invoke(Object(Slim\Http\Request), Object(Slim\Http\Response), Object(Slim\App))
+#16 C:\xampp\htdocs\churchcrm\vendor\slim\slim\Slim\MiddlewareAwareTrait.php(70): call_user_func(Object(Slim\DeferredCallable), Object(Slim\Http\Request), Object(Slim\Http\Response), Object(Slim\App))
+#17 C:\xampp\htdocs\churchcrm\ChurchCRM\Slim\Middleware\AuthMiddleware.php(34): Slim\App->Slim\{closure}(Object(Slim\Http\Request), Object(Slim\Http\Response))
+#18 [internal function]: ChurchCRM\Slim\Middleware\AuthMiddleware->__invoke(Object(Slim\Http\Request), Object(Slim\Http\Response), Object(Closure))
+#19 C:\xampp\htdocs\churchcrm\vendor\slim\slim\Slim\DeferredCallable.php(57): call_user_func_array(Object(ChurchCRM\Slim\Middleware\AuthMiddleware), Array)
+#20 [internal function]: Slim\DeferredCallable->__invoke(Object(Slim\Http\Request), Object(Slim\Http\Response), Object(Closure))
+#21 C:\xampp\htdocs\churchcrm\vendor\slim\slim\Slim\MiddlewareAwareTrait.php(70): call_user_func(Object(Slim\DeferredCallable), Object(Slim\Http\Request), Object(Slim\Http\Response), Object(Closure))
+#22 C:\xampp\htdocs\churchcrm\vendor\slim\slim\Slim\MiddlewareAwareTrait.php(117): Slim\App->Slim\{closure}(Object(Slim\Http\Request), Object(Slim\Http\Response))
+#23 C:\xampp\htdocs\churchcrm\vendor\slim\slim\Slim\App.php(392): Slim\App->callMiddlewareStack(Object(Slim\Http\Request), Object(Slim\Http\Response))
+#24 C:\xampp\htdocs\churchcrm\vendor\slim\slim\Slim\App.php(297): Slim\App->process(Object(Slim\Http\Request), Object(Slim\Http\Response))
+#25 C:\xampp\htdocs\churchcrm\v2\index.php(48): Slim\App->run()
+#26 {main}
+View in rendered output by enabling the "displayErrorDetails" setting.
+
+[10-Feb-2021 23:23:28 UTC] Slim Application Error:
+Type: Error
+Message: Call to a member function find() on null
+File: C:\xampp\htdocs\churchcrm\main.php
+Line: 13
+Trace: #0 C:\xampp\htdocs\churchcrm\v2\templates\root\dashboard.php(10): getTranslation('Families')
+#1 C:\xampp\htdocs\churchcrm\vendor\slim\php-view\src\PhpRenderer.php(203): include('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\churchcrm\vendor\slim\php-view\src\PhpRenderer.php(184): Slim\Views\PhpRenderer->protectedIncludeScope('templates/root/...', Array)
+#3 C:\xampp\htdocs\churchcrm\vendor\slim\php-view\src\PhpRenderer.php(153): Slim\Views\PhpRenderer->fetchTemplate('dashboard.php', Array)
+#4 C:\xampp\htdocs\churchcrm\vendor\slim\php-view\src\PhpRenderer.php(54): Slim\Views\PhpRenderer->fetch('dashboard.php', Array, true)
+#5 C:\xampp\htdocs\churchcrm\v2\routes\root.php(60): Slim\Views\PhpRenderer->render(Object(Slim\Http\Response), 'dashboard.php', Array)
+#6 [internal function]: viewDashboard(Object(Slim\Http\Request), Object(Slim\Http\Response), Array)
+#7 C:\xampp\htdocs\churchcrm\vendor\slim\slim\Slim\Handlers\Strategies\RequestResponse.php(40): call_user_func('viewDashboard', Object(Slim\Http\Request), Object(Slim\Http\Response), Array)
+#8 C:\xampp\htdocs\churchcrm\vendor\slim\slim\Slim\Route.php(281): Slim\Handlers\Strategies\RequestResponse->__invoke('viewDashboard', Object(Slim\Http\Request), Object(Slim\Http\Response), Array)
+#9 C:\xampp\htdocs\churchcrm\vendor\slim\slim\Slim\MiddlewareAwareTrait.php(117): Slim\Route->__invoke(Object(Slim\Http\Request), Object(Slim\Http\Response))
+#10 C:\xampp\htdocs\churchcrm\vendor\slim\slim\Slim\Route.php(268): Slim\Route->callMiddlewareStack(Object(Slim\Http\Request), Object(Slim\Http\Response))
+#11 C:\xampp\htdocs\churchcrm\vendor\slim\slim\Slim\App.php(503): Slim\Route->run(Object(Slim\Http\Request), Object(Slim\Http\Response))
+#12 C:\xampp\htdocs\churchcrm\ChurchCRM\Slim\Middleware\VersionMiddleware.php(13): Slim\App->__invoke(Object(Slim\Http\Request), Object(Slim\Http\Response))
+#13 [internal function]: ChurchCRM\Slim\Middleware\VersionMiddleware->__invoke(Object(Slim\Http\Request), Object(Slim\Http\Response), Object(Slim\App))
+#14 C:\xampp\htdocs\churchcrm\vendor\slim\slim\Slim\DeferredCallable.php(57): call_user_func_array(Object(ChurchCRM\Slim\Middleware\VersionMiddleware), Array)
+#15 [internal function]: Slim\DeferredCallable->__invoke(Object(Slim\Http\Request), Object(Slim\Http\Response), Object(Slim\App))
+#16 C:\xampp\htdocs\churchcrm\vendor\slim\slim\Slim\MiddlewareAwareTrait.php(70): call_user_func(Object(Slim\DeferredCallable), Object(Slim\Http\Request), Object(Slim\Http\Response), Object(Slim\App))
+#17 C:\xampp\htdocs\churchcrm\ChurchCRM\Slim\Middleware\AuthMiddleware.php(34): Slim\App->Slim\{closure}(Object(Slim\Http\Request), Object(Slim\Http\Response))
+#18 [internal function]: ChurchCRM\Slim\Middleware\AuthMiddleware->__invoke(Object(Slim\Http\Request), Object(Slim\Http\Response), Object(Closure))
+#19 C:\xampp\htdocs\churchcrm\vendor\slim\slim\Slim\DeferredCallable.php(57): call_user_func_array(Object(ChurchCRM\Slim\Middleware\AuthMiddleware), Array)
+#20 [internal function]: Slim\DeferredCallable->__invoke(Object(Slim\Http\Request), Object(Slim\Http\Response), Object(Closure))
+#21 C:\xampp\htdocs\churchcrm\vendor\slim\slim\Slim\MiddlewareAwareTrait.php(70): call_user_func(Object(Slim\DeferredCallable), Object(Slim\Http\Request), Object(Slim\Http\Response), Object(Closure))
+#22 C:\xampp\htdocs\churchcrm\vendor\slim\slim\Slim\MiddlewareAwareTrait.php(117): Slim\App->Slim\{closure}(Object(Slim\Http\Request), Object(Slim\Http\Response))
+#23 C:\xampp\htdocs\churchcrm\vendor\slim\slim\Slim\App.php(392): Slim\App->callMiddlewareStack(Object(Slim\Http\Request), Object(Slim\Http\Response))
+#24 C:\xampp\htdocs\churchcrm\vendor\slim\slim\Slim\App.php(297): Slim\App->process(Object(Slim\Http\Request), Object(Slim\Http\Response))
+#25 C:\xampp\htdocs\churchcrm\v2\index.php(48): Slim\App->run()
+#26 {main}
+View in rendered output by enabling the "displayErrorDetails" setting.
+
+[10-Feb-2021 23:23:59 UTC] Slim Application Error:
+Type: Error
+Message: Call to a member function find() on null
+File: C:\xampp\htdocs\churchcrm\main.php
+Line: 13
+Trace: #0 C:\xampp\htdocs\churchcrm\v2\templates\root\dashboard.php(10): getTranslation('Families')
+#1 C:\xampp\htdocs\churchcrm\vendor\slim\php-view\src\PhpRenderer.php(203): include('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\churchcrm\vendor\slim\php-view\src\PhpRenderer.php(184): Slim\Views\PhpRenderer->protectedIncludeScope('templates/root/...', Array)
+#3 C:\xampp\htdocs\churchcrm\vendor\slim\php-view\src\PhpRenderer.php(153): Slim\Views\PhpRenderer->fetchTemplate('dashboard.php', Array)
+#4 C:\xampp\htdocs\churchcrm\vendor\slim\php-view\src\PhpRenderer.php(54): Slim\Views\PhpRenderer->fetch('dashboard.php', Array, true)
+#5 C:\xampp\htdocs\churchcrm\v2\routes\root.php(60): Slim\Views\PhpRenderer->render(Object(Slim\Http\Response), 'dashboard.php', Array)
+#6 [internal function]: viewDashboard(Object(Slim\Http\Request), Object(Slim\Http\Response), Array)
+#7 C:\xampp\htdocs\churchcrm\vendor\slim\slim\Slim\Handlers\Strategies\RequestResponse.php(40): call_user_func('viewDashboard', Object(Slim\Http\Request), Object(Slim\Http\Response), Array)
+#8 C:\xampp\htdocs\churchcrm\vendor\slim\slim\Slim\Route.php(281): Slim\Handlers\Strategies\RequestResponse->__invoke('viewDashboard', Object(Slim\Http\Request), Object(Slim\Http\Response), Array)
+#9 C:\xampp\htdocs\churchcrm\vendor\slim\slim\Slim\MiddlewareAwareTrait.php(117): Slim\Route->__invoke(Object(Slim\Http\Request), Object(Slim\Http\Response))
+#10 C:\xampp\htdocs\churchcrm\vendor\slim\slim\Slim\Route.php(268): Slim\Route->callMiddlewareStack(Object(Slim\Http\Request), Object(Slim\Http\Response))
+#11 C:\xampp\htdocs\churchcrm\vendor\slim\slim\Slim\App.php(503): Slim\Route->run(Object(Slim\Http\Request), Object(Slim\Http\Response))
+#12 C:\xampp\htdocs\churchcrm\ChurchCRM\Slim\Middleware\VersionMiddleware.php(13): Slim\App->__invoke(Object(Slim\Http\Request), Object(Slim\Http\Response))
+#13 [internal function]: ChurchCRM\Slim\Middleware\VersionMiddleware->__invoke(Object(Slim\Http\Request), Object(Slim\Http\Response), Object(Slim\App))
+#14 C:\xampp\htdocs\churchcrm\vendor\slim\slim\Slim\DeferredCallable.php(57): call_user_func_array(Object(ChurchCRM\Slim\Middleware\VersionMiddleware), Array)
+#15 [internal function]: Slim\DeferredCallable->__invoke(Object(Slim\Http\Request), Object(Slim\Http\Response), Object(Slim\App))
+#16 C:\xampp\htdocs\churchcrm\vendor\slim\slim\Slim\MiddlewareAwareTrait.php(70): call_user_func(Object(Slim\DeferredCallable), Object(Slim\Http\Request), Object(Slim\Http\Response), Object(Slim\App))
+#17 C:\xampp\htdocs\churchcrm\ChurchCRM\Slim\Middleware\AuthMiddleware.php(34): Slim\App->Slim\{closure}(Object(Slim\Http\Request), Object(Slim\Http\Response))
+#18 [internal function]: ChurchCRM\Slim\Middleware\AuthMiddleware->__invoke(Object(Slim\Http\Request), Object(Slim\Http\Response), Object(Closure))
+#19 C:\xampp\htdocs\churchcrm\vendor\slim\slim\Slim\DeferredCallable.php(57): call_user_func_array(Object(ChurchCRM\Slim\Middleware\AuthMiddleware), Array)
+#20 [internal function]: Slim\DeferredCallable->__invoke(Object(Slim\Http\Request), Object(Slim\Http\Response), Object(Closure))
+#21 C:\xampp\htdocs\churchcrm\vendor\slim\slim\Slim\MiddlewareAwareTrait.php(70): call_user_func(Object(Slim\DeferredCallable), Object(Slim\Http\Request), Object(Slim\Http\Response), Object(Closure))
+#22 C:\xampp\htdocs\churchcrm\vendor\slim\slim\Slim\MiddlewareAwareTrait.php(117): Slim\App->Slim\{closure}(Object(Slim\Http\Request), Object(Slim\Http\Response))
+#23 C:\xampp\htdocs\churchcrm\vendor\slim\slim\Slim\App.php(392): Slim\App->callMiddlewareStack(Object(Slim\Http\Request), Object(Slim\Http\Response))
+#24 C:\xampp\htdocs\churchcrm\vendor\slim\slim\Slim\App.php(297): Slim\App->process(Object(Slim\Http\Request), Object(Slim\Http\Response))
+#25 C:\xampp\htdocs\churchcrm\v2\index.php(48): Slim\App->run()
+#26 {main}
+View in rendered output by enabling the "displayErrorDetails" setting.
+
+[10-Feb-2021 23:24:07 UTC] Slim Application Error:
+Type: Error
+Message: Call to a member function find() on null
+File: C:\xampp\htdocs\churchcrm\main.php
+Line: 13
+Trace: #0 C:\xampp\htdocs\churchcrm\v2\templates\root\dashboard.php(10): getTranslation('Families')
+#1 C:\xampp\htdocs\churchcrm\vendor\slim\php-view\src\PhpRenderer.php(203): include('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\churchcrm\vendor\slim\php-view\src\PhpRenderer.php(184): Slim\Views\PhpRenderer->protectedIncludeScope('templates/root/...', Array)
+#3 C:\xampp\htdocs\churchcrm\vendor\slim\php-view\src\PhpRenderer.php(153): Slim\Views\PhpRenderer->fetchTemplate('dashboard.php', Array)
+#4 C:\xampp\htdocs\churchcrm\vendor\slim\php-view\src\PhpRenderer.php(54): Slim\Views\PhpRenderer->fetch('dashboard.php', Array, true)
+#5 C:\xampp\htdocs\churchcrm\v2\routes\root.php(60): Slim\Views\PhpRenderer->render(Object(Slim\Http\Response), 'dashboard.php', Array)
+#6 [internal function]: viewDashboard(Object(Slim\Http\Request), Object(Slim\Http\Response), Array)
+#7 C:\xampp\htdocs\churchcrm\vendor\slim\slim\Slim\Handlers\Strategies\RequestResponse.php(40): call_user_func('viewDashboard', Object(Slim\Http\Request), Object(Slim\Http\Response), Array)
+#8 C:\xampp\htdocs\churchcrm\vendor\slim\slim\Slim\Route.php(281): Slim\Handlers\Strategies\RequestResponse->__invoke('viewDashboard', Object(Slim\Http\Request), Object(Slim\Http\Response), Array)
+#9 C:\xampp\htdocs\churchcrm\vendor\slim\slim\Slim\MiddlewareAwareTrait.php(117): Slim\Route->__invoke(Object(Slim\Http\Request), Object(Slim\Http\Response))
+#10 C:\xampp\htdocs\churchcrm\vendor\slim\slim\Slim\Route.php(268): Slim\Route->callMiddlewareStack(Object(Slim\Http\Request), Object(Slim\Http\Response))
+#11 C:\xampp\htdocs\churchcrm\vendor\slim\slim\Slim\App.php(503): Slim\Route->run(Object(Slim\Http\Request), Object(Slim\Http\Response))
+#12 C:\xampp\htdocs\churchcrm\ChurchCRM\Slim\Middleware\VersionMiddleware.php(13): Slim\App->__invoke(Object(Slim\Http\Request), Object(Slim\Http\Response))
+#13 [internal function]: ChurchCRM\Slim\Middleware\VersionMiddleware->__invoke(Object(Slim\Http\Request), Object(Slim\Http\Response), Object(Slim\App))
+#14 C:\xampp\htdocs\churchcrm\vendor\slim\slim\Slim\DeferredCallable.php(57): call_user_func_array(Object(ChurchCRM\Slim\Middleware\VersionMiddleware), Array)
+#15 [internal function]: Slim\DeferredCallable->__invoke(Object(Slim\Http\Request), Object(Slim\Http\Response), Object(Slim\App))
+#16 C:\xampp\htdocs\churchcrm\vendor\slim\slim\Slim\MiddlewareAwareTrait.php(70): call_user_func(Object(Slim\DeferredCallable), Object(Slim\Http\Request), Object(Slim\Http\Response), Object(Slim\App))
+#17 C:\xampp\htdocs\churchcrm\ChurchCRM\Slim\Middleware\AuthMiddleware.php(34): Slim\App->Slim\{closure}(Object(Slim\Http\Request), Object(Slim\Http\Response))
+#18 [internal function]: ChurchCRM\Slim\Middleware\AuthMiddleware->__invoke(Object(Slim\Http\Request), Object(Slim\Http\Response), Object(Closure))
+#19 C:\xampp\htdocs\churchcrm\vendor\slim\slim\Slim\DeferredCallable.php(57): call_user_func_array(Object(ChurchCRM\Slim\Middleware\AuthMiddleware), Array)
+#20 [internal function]: Slim\DeferredCallable->__invoke(Object(Slim\Http\Request), Object(Slim\Http\Response), Object(Closure))
+#21 C:\xampp\htdocs\churchcrm\vendor\slim\slim\Slim\MiddlewareAwareTrait.php(70): call_user_func(Object(Slim\DeferredCallable), Object(Slim\Http\Request), Object(Slim\Http\Response), Object(Closure))
+#22 C:\xampp\htdocs\churchcrm\vendor\slim\slim\Slim\MiddlewareAwareTrait.php(117): Slim\App->Slim\{closure}(Object(Slim\Http\Request), Object(Slim\Http\Response))
+#23 C:\xampp\htdocs\churchcrm\vendor\slim\slim\Slim\App.php(392): Slim\App->callMiddlewareStack(Object(Slim\Http\Request), Object(Slim\Http\Response))
+#24 C:\xampp\htdocs\churchcrm\vendor\slim\slim\Slim\App.php(297): Slim\App->process(Object(Slim\Http\Request), Object(Slim\Http\Response))
+#25 C:\xampp\htdocs\churchcrm\v2\index.php(48): Slim\App->run()
+#26 {main}
+View in rendered output by enabling the "displayErrorDetails" setting.
+
+[10-Feb-2021 23:25:12 UTC] Slim Application Error:
+Type: Error
+Message: Call to a member function find() on null
+File: C:\xampp\htdocs\churchcrm\main.php
+Line: 13
+Trace: #0 C:\xampp\htdocs\churchcrm\v2\templates\root\dashboard.php(12): getTranslation('Families')
+#1 C:\xampp\htdocs\churchcrm\vendor\slim\php-view\src\PhpRenderer.php(203): include('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\churchcrm\vendor\slim\php-view\src\PhpRenderer.php(184): Slim\Views\PhpRenderer->protectedIncludeScope('templates/root/...', Array)
+#3 C:\xampp\htdocs\churchcrm\vendor\slim\php-view\src\PhpRenderer.php(153): Slim\Views\PhpRenderer->fetchTemplate('dashboard.php', Array)
+#4 C:\xampp\htdocs\churchcrm\vendor\slim\php-view\src\PhpRenderer.php(54): Slim\Views\PhpRenderer->fetch('dashboard.php', Array, true)
+#5 C:\xampp\htdocs\churchcrm\v2\routes\root.php(60): Slim\Views\PhpRenderer->render(Object(Slim\Http\Response), 'dashboard.php', Array)
+#6 [internal function]: viewDashboard(Object(Slim\Http\Request), Object(Slim\Http\Response), Array)
+#7 C:\xampp\htdocs\churchcrm\vendor\slim\slim\Slim\Handlers\Strategies\RequestResponse.php(40): call_user_func('viewDashboard', Object(Slim\Http\Request), Object(Slim\Http\Response), Array)
+#8 C:\xampp\htdocs\churchcrm\vendor\slim\slim\Slim\Route.php(281): Slim\Handlers\Strategies\RequestResponse->__invoke('viewDashboard', Object(Slim\Http\Request), Object(Slim\Http\Response), Array)
+#9 C:\xampp\htdocs\churchcrm\vendor\slim\slim\Slim\MiddlewareAwareTrait.php(117): Slim\Route->__invoke(Object(Slim\Http\Request), Object(Slim\Http\Response))
+#10 C:\xampp\htdocs\churchcrm\vendor\slim\slim\Slim\Route.php(268): Slim\Route->callMiddlewareStack(Object(Slim\Http\Request), Object(Slim\Http\Response))
+#11 C:\xampp\htdocs\churchcrm\vendor\slim\slim\Slim\App.php(503): Slim\Route->run(Object(Slim\Http\Request), Object(Slim\Http\Response))
+#12 C:\xampp\htdocs\churchcrm\ChurchCRM\Slim\Middleware\VersionMiddleware.php(13): Slim\App->__invoke(Object(Slim\Http\Request), Object(Slim\Http\Response))
+#13 [internal function]: ChurchCRM\Slim\Middleware\VersionMiddleware->__invoke(Object(Slim\Http\Request), Object(Slim\Http\Response), Object(Slim\App))
+#14 C:\xampp\htdocs\churchcrm\vendor\slim\slim\Slim\DeferredCallable.php(57): call_user_func_array(Object(ChurchCRM\Slim\Middleware\VersionMiddleware), Array)
+#15 [internal function]: Slim\DeferredCallable->__invoke(Object(Slim\Http\Request), Object(Slim\Http\Response), Object(Slim\App))
+#16 C:\xampp\htdocs\churchcrm\vendor\slim\slim\Slim\MiddlewareAwareTrait.php(70): call_user_func(Object(Slim\DeferredCallable), Object(Slim\Http\Request), Object(Slim\Http\Response), Object(Slim\App))
+#17 C:\xampp\htdocs\churchcrm\ChurchCRM\Slim\Middleware\AuthMiddleware.php(34): Slim\App->Slim\{closure}(Object(Slim\Http\Request), Object(Slim\Http\Response))
+#18 [internal function]: ChurchCRM\Slim\Middleware\AuthMiddleware->__invoke(Object(Slim\Http\Request), Object(Slim\Http\Response), Object(Closure))
+#19 C:\xampp\htdocs\churchcrm\vendor\slim\slim\Slim\DeferredCallable.php(57): call_user_func_array(Object(ChurchCRM\Slim\Middleware\AuthMiddleware), Array)
+#20 [internal function]: Slim\DeferredCallable->__invoke(Object(Slim\Http\Request), Object(Slim\Http\Response), Object(Closure))
+#21 C:\xampp\htdocs\churchcrm\vendor\slim\slim\Slim\MiddlewareAwareTrait.php(70): call_user_func(Object(Slim\DeferredCallable), Object(Slim\Http\Request), Object(Slim\Http\Response), Object(Closure))
+#22 C:\xampp\htdocs\churchcrm\vendor\slim\slim\Slim\MiddlewareAwareTrait.php(117): Slim\App->Slim\{closure}(Object(Slim\Http\Request), Object(Slim\Http\Response))
+#23 C:\xampp\htdocs\churchcrm\vendor\slim\slim\Slim\App.php(392): Slim\App->callMiddlewareStack(Object(Slim\Http\Request), Object(Slim\Http\Response))
+#24 C:\xampp\htdocs\churchcrm\vendor\slim\slim\Slim\App.php(297): Slim\App->process(Object(Slim\Http\Request), Object(Slim\Http\Response))
+#25 C:\xampp\htdocs\churchcrm\v2\index.php(48): Slim\App->run()
+#26 {main}
+View in rendered output by enabling the "displayErrorDetails" setting.
+
+[10-Feb-2021 23:26:20 UTC] Slim Application Error:
+Type: Error
+Message: Call to a member function find() on null
+File: C:\xampp\htdocs\churchcrm\main.php
+Line: 14
+Trace: #0 C:\xampp\htdocs\churchcrm\v2\templates\root\dashboard.php(12): getTranslation('Families')
+#1 C:\xampp\htdocs\churchcrm\vendor\slim\php-view\src\PhpRenderer.php(203): include('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\churchcrm\vendor\slim\php-view\src\PhpRenderer.php(184): Slim\Views\PhpRenderer->protectedIncludeScope('templates/root/...', Array)
+#3 C:\xampp\htdocs\churchcrm\vendor\slim\php-view\src\PhpRenderer.php(153): Slim\Views\PhpRenderer->fetchTemplate('dashboard.php', Array)
+#4 C:\xampp\htdocs\churchcrm\vendor\slim\php-view\src\PhpRenderer.php(54): Slim\Views\PhpRenderer->fetch('dashboard.php', Array, true)
+#5 C:\xampp\htdocs\churchcrm\v2\routes\root.php(60): Slim\Views\PhpRenderer->render(Object(Slim\Http\Response), 'dashboard.php', Array)
+#6 [internal function]: viewDashboard(Object(Slim\Http\Request), Object(Slim\Http\Response), Array)
+#7 C:\xampp\htdocs\churchcrm\vendor\slim\slim\Slim\Handlers\Strategies\RequestResponse.php(40): call_user_func('viewDashboard', Object(Slim\Http\Request), Object(Slim\Http\Response), Array)
+#8 C:\xampp\htdocs\churchcrm\vendor\slim\slim\Slim\Route.php(281): Slim\Handlers\Strategies\RequestResponse->__invoke('viewDashboard', Object(Slim\Http\Request), Object(Slim\Http\Response), Array)
+#9 C:\xampp\htdocs\churchcrm\vendor\slim\slim\Slim\MiddlewareAwareTrait.php(117): Slim\Route->__invoke(Object(Slim\Http\Request), Object(Slim\Http\Response))
+#10 C:\xampp\htdocs\churchcrm\vendor\slim\slim\Slim\Route.php(268): Slim\Route->callMiddlewareStack(Object(Slim\Http\Request), Object(Slim\Http\Response))
+#11 C:\xampp\htdocs\churchcrm\vendor\slim\slim\Slim\App.php(503): Slim\Route->run(Object(Slim\Http\Request), Object(Slim\Http\Response))
+#12 C:\xampp\htdocs\churchcrm\ChurchCRM\Slim\Middleware\VersionMiddleware.php(13): Slim\App->__invoke(Object(Slim\Http\Request), Object(Slim\Http\Response))
+#13 [internal function]: ChurchCRM\Slim\Middleware\VersionMiddleware->__invoke(Object(Slim\Http\Request), Object(Slim\Http\Response), Object(Slim\App))
+#14 C:\xampp\htdocs\churchcrm\vendor\slim\slim\Slim\DeferredCallable.php(57): call_user_func_array(Object(ChurchCRM\Slim\Middleware\VersionMiddleware), Array)
+#15 [internal function]: Slim\DeferredCallable->__invoke(Object(Slim\Http\Request), Object(Slim\Http\Response), Object(Slim\App))
+#16 C:\xampp\htdocs\churchcrm\vendor\slim\slim\Slim\MiddlewareAwareTrait.php(70): call_user_func(Object(Slim\DeferredCallable), Object(Slim\Http\Request), Object(Slim\Http\Response), Object(Slim\App))
+#17 C:\xampp\htdocs\churchcrm\ChurchCRM\Slim\Middleware\AuthMiddleware.php(34): Slim\App->Slim\{closure}(Object(Slim\Http\Request), Object(Slim\Http\Response))
+#18 [internal function]: ChurchCRM\Slim\Middleware\AuthMiddleware->__invoke(Object(Slim\Http\Request), Object(Slim\Http\Response), Object(Closure))
+#19 C:\xampp\htdocs\churchcrm\vendor\slim\slim\Slim\DeferredCallable.php(57): call_user_func_array(Object(ChurchCRM\Slim\Middleware\AuthMiddleware), Array)
+#20 [internal function]: Slim\DeferredCallable->__invoke(Object(Slim\Http\Request), Object(Slim\Http\Response), Object(Closure))
+#21 C:\xampp\htdocs\churchcrm\vendor\slim\slim\Slim\MiddlewareAwareTrait.php(70): call_user_func(Object(Slim\DeferredCallable), Object(Slim\Http\Request), Object(Slim\Http\Response), Object(Closure))
+#22 C:\xampp\htdocs\churchcrm\vendor\slim\slim\Slim\MiddlewareAwareTrait.php(117): Slim\App->Slim\{closure}(Object(Slim\Http\Request), Object(Slim\Http\Response))
+#23 C:\xampp\htdocs\churchcrm\vendor\slim\slim\Slim\App.php(392): Slim\App->callMiddlewareStack(Object(Slim\Http\Request), Object(Slim\Http\Response))
+#24 C:\xampp\htdocs\churchcrm\vendor\slim\slim\Slim\App.php(297): Slim\App->process(Object(Slim\Http\Request), Object(Slim\Http\Response))
+#25 C:\xampp\htdocs\churchcrm\v2\index.php(48): Slim\App->run()
+#26 {main}
+View in rendered output by enabling the "displayErrorDetails" setting.
+
+[10-Feb-2021 23:30:43 UTC] Slim Application Error:
+Type: Error
+Message: Call to a member function find() on null
+File: C:\xampp\htdocs\churchcrm\Include\Header.php
+Line: 24
+Trace: #0 C:\xampp\htdocs\churchcrm\v2\templates\root\dashboard.php(22): getTranslation('Families')
+#1 C:\xampp\htdocs\churchcrm\vendor\slim\php-view\src\PhpRenderer.php(203): include('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\churchcrm\vendor\slim\php-view\src\PhpRenderer.php(184): Slim\Views\PhpRenderer->protectedIncludeScope('templates/root/...', Array)
+#3 C:\xampp\htdocs\churchcrm\vendor\slim\php-view\src\PhpRenderer.php(153): Slim\Views\PhpRenderer->fetchTemplate('dashboard.php', Array)
+#4 C:\xampp\htdocs\churchcrm\vendor\slim\php-view\src\PhpRenderer.php(54): Slim\Views\PhpRenderer->fetch('dashboard.php', Array, true)
+#5 C:\xampp\htdocs\churchcrm\v2\routes\root.php(60): Slim\Views\PhpRenderer->render(Object(Slim\Http\Response), 'dashboard.php', Array)
+#6 [internal function]: viewDashboard(Object(Slim\Http\Request), Object(Slim\Http\Response), Array)
+#7 C:\xampp\htdocs\churchcrm\vendor\slim\slim\Slim\Handlers\Strategies\RequestResponse.php(40): call_user_func('viewDashboard', Object(Slim\Http\Request), Object(Slim\Http\Response), Array)
+#8 C:\xampp\htdocs\churchcrm\vendor\slim\slim\Slim\Route.php(281): Slim\Handlers\Strategies\RequestResponse->__invoke('viewDashboard', Object(Slim\Http\Request), Object(Slim\Http\Response), Array)
+#9 C:\xampp\htdocs\churchcrm\vendor\slim\slim\Slim\MiddlewareAwareTrait.php(117): Slim\Route->__invoke(Object(Slim\Http\Request), Object(Slim\Http\Response))
+#10 C:\xampp\htdocs\churchcrm\vendor\slim\slim\Slim\Route.php(268): Slim\Route->callMiddlewareStack(Object(Slim\Http\Request), Object(Slim\Http\Response))
+#11 C:\xampp\htdocs\churchcrm\vendor\slim\slim\Slim\App.php(503): Slim\Route->run(Object(Slim\Http\Request), Object(Slim\Http\Response))
+#12 C:\xampp\htdocs\churchcrm\ChurchCRM\Slim\Middleware\VersionMiddleware.php(13): Slim\App->__invoke(Object(Slim\Http\Request), Object(Slim\Http\Response))
+#13 [internal function]: ChurchCRM\Slim\Middleware\VersionMiddleware->__invoke(Object(Slim\Http\Request), Object(Slim\Http\Response), Object(Slim\App))
+#14 C:\xampp\htdocs\churchcrm\vendor\slim\slim\Slim\DeferredCallable.php(57): call_user_func_array(Object(ChurchCRM\Slim\Middleware\VersionMiddleware), Array)
+#15 [internal function]: Slim\DeferredCallable->__invoke(Object(Slim\Http\Request), Object(Slim\Http\Response), Object(Slim\App))
+#16 C:\xampp\htdocs\churchcrm\vendor\slim\slim\Slim\MiddlewareAwareTrait.php(70): call_user_func(Object(Slim\DeferredCallable), Object(Slim\Http\Request), Object(Slim\Http\Response), Object(Slim\App))
+#17 C:\xampp\htdocs\churchcrm\ChurchCRM\Slim\Middleware\AuthMiddleware.php(34): Slim\App->Slim\{closure}(Object(Slim\Http\Request), Object(Slim\Http\Response))
+#18 [internal function]: ChurchCRM\Slim\Middleware\AuthMiddleware->__invoke(Object(Slim\Http\Request), Object(Slim\Http\Response), Object(Closure))
+#19 C:\xampp\htdocs\churchcrm\vendor\slim\slim\Slim\DeferredCallable.php(57): call_user_func_array(Object(ChurchCRM\Slim\Middleware\AuthMiddleware), Array)
+#20 [internal function]: Slim\DeferredCallable->__invoke(Object(Slim\Http\Request), Object(Slim\Http\Response), Object(Closure))
+#21 C:\xampp\htdocs\churchcrm\vendor\slim\slim\Slim\MiddlewareAwareTrait.php(70): call_user_func(Object(Slim\DeferredCallable), Object(Slim\Http\Request), Object(Slim\Http\Response), Object(Closure))
+#22 C:\xampp\htdocs\churchcrm\vendor\slim\slim\Slim\MiddlewareAwareTrait.php(117): Slim\App->Slim\{closure}(Object(Slim\Http\Request), Object(Slim\Http\Response))
+#23 C:\xampp\htdocs\churchcrm\vendor\slim\slim\Slim\App.php(392): Slim\App->callMiddlewareStack(Object(Slim\Http\Request), Object(Slim\Http\Response))
+#24 C:\xampp\htdocs\churchcrm\vendor\slim\slim\Slim\App.php(297): Slim\App->process(Object(Slim\Http\Request), Object(Slim\Http\Response))
+#25 C:\xampp\htdocs\churchcrm\v2\index.php(48): Slim\App->run()
+#26 {main}
+View in rendered output by enabling the "displayErrorDetails" setting.
+
+[10-Feb-2021 23:37:57 UTC] Slim Application Error:
+Type: Error
+Message: Call to undefined function getTranslation()
+File: C:\xampp\htdocs\churchcrm\v2\templates\root\dashboard.php
+Line: 22
+Trace: #0 C:\xampp\htdocs\churchcrm\vendor\slim\php-view\src\PhpRenderer.php(203): include()
+#1 C:\xampp\htdocs\churchcrm\vendor\slim\php-view\src\PhpRenderer.php(184): Slim\Views\PhpRenderer->protectedIncludeScope('templates/root/...', Array)
+#2 C:\xampp\htdocs\churchcrm\vendor\slim\php-view\src\PhpRenderer.php(153): Slim\Views\PhpRenderer->fetchTemplate('dashboard.php', Array)
+#3 C:\xampp\htdocs\churchcrm\vendor\slim\php-view\src\PhpRenderer.php(54): Slim\Views\PhpRenderer->fetch('dashboard.php', Array, true)
+#4 C:\xampp\htdocs\churchcrm\v2\routes\root.php(60): Slim\Views\PhpRenderer->render(Object(Slim\Http\Response), 'dashboard.php', Array)
+#5 [internal function]: viewDashboard(Object(Slim\Http\Request), Object(Slim\Http\Response), Array)
+#6 C:\xampp\htdocs\churchcrm\vendor\slim\slim\Slim\Handlers\Strategies\RequestResponse.php(40): call_user_func('viewDashboard', Object(Slim\Http\Request), Object(Slim\Http\Response), Array)
+#7 C:\xampp\htdocs\churchcrm\vendor\slim\slim\Slim\Route.php(281): Slim\Handlers\Strategies\RequestResponse->__invoke('viewDashboard', Object(Slim\Http\Request), Object(Slim\Http\Response), Array)
+#8 C:\xampp\htdocs\churchcrm\vendor\slim\slim\Slim\MiddlewareAwareTrait.php(117): Slim\Route->__invoke(Object(Slim\Http\Request), Object(Slim\Http\Response))
+#9 C:\xampp\htdocs\churchcrm\vendor\slim\slim\Slim\Route.php(268): Slim\Route->callMiddlewareStack(Object(Slim\Http\Request), Object(Slim\Http\Response))
+#10 C:\xampp\htdocs\churchcrm\vendor\slim\slim\Slim\App.php(503): Slim\Route->run(Object(Slim\Http\Request), Object(Slim\Http\Response))
+#11 C:\xampp\htdocs\churchcrm\ChurchCRM\Slim\Middleware\VersionMiddleware.php(13): Slim\App->__invoke(Object(Slim\Http\Request), Object(Slim\Http\Response))
+#12 [internal function]: ChurchCRM\Slim\Middleware\VersionMiddleware->__invoke(Object(Slim\Http\Request), Object(Slim\Http\Response), Object(Slim\App))
+#13 C:\xampp\htdocs\churchcrm\vendor\slim\slim\Slim\DeferredCallable.php(57): call_user_func_array(Object(ChurchCRM\Slim\Middleware\VersionMiddleware), Array)
+#14 [internal function]: Slim\DeferredCallable->__invoke(Object(Slim\Http\Request), Object(Slim\Http\Response), Object(Slim\App))
+#15 C:\xampp\htdocs\churchcrm\vendor\slim\slim\Slim\MiddlewareAwareTrait.php(70): call_user_func(Object(Slim\DeferredCallable), Object(Slim\Http\Request), Object(Slim\Http\Response), Object(Slim\App))
+#16 C:\xampp\htdocs\churchcrm\ChurchCRM\Slim\Middleware\AuthMiddleware.php(34): Slim\App->Slim\{closure}(Object(Slim\Http\Request), Object(Slim\Http\Response))
+#17 [internal function]: ChurchCRM\Slim\Middleware\AuthMiddleware->__invoke(Object(Slim\Http\Request), Object(Slim\Http\Response), Object(Closure))
+#18 C:\xampp\htdocs\churchcrm\vendor\slim\slim\Slim\DeferredCallable.php(57): call_user_func_array(Object(ChurchCRM\Slim\Middleware\AuthMiddleware), Array)
+#19 [internal function]: Slim\DeferredCallable->__invoke(Object(Slim\Http\Request), Object(Slim\Http\Response), Object(Closure))
+#20 C:\xampp\htdocs\churchcrm\vendor\slim\slim\Slim\MiddlewareAwareTrait.php(70): call_user_func(Object(Slim\DeferredCallable), Object(Slim\Http\Request), Object(Slim\Http\Response), Object(Closure))
+#21 C:\xampp\htdocs\churchcrm\vendor\slim\slim\Slim\MiddlewareAwareTrait.php(117): Slim\App->Slim\{closure}(Object(Slim\Http\Request), Object(Slim\Http\Response))
+#22 C:\xampp\htdocs\churchcrm\vendor\slim\slim\Slim\App.php(392): Slim\App->callMiddlewareStack(Object(Slim\Http\Request), Object(Slim\Http\Response))
+#23 C:\xampp\htdocs\churchcrm\vendor\slim\slim\Slim\App.php(297): Slim\App->process(Object(Slim\Http\Request), Object(Slim\Http\Response))
+#24 C:\xampp\htdocs\churchcrm\v2\index.php(48): Slim\App->run()
+#25 {main}
+View in rendered output by enabling the "displayErrorDetails" setting.
+
+[10-Feb-2021 23:38:09 UTC] Slim Application Error:
+Type: ParseError
+Message: syntax error, unexpected 'exit' (T_EXIT), expecting ';' or ','
+File: C:\xampp\htdocs\churchcrm\v2\templates\root\dashboard.php
+Line: 22
+Trace: #0 C:\xampp\htdocs\churchcrm\vendor\slim\php-view\src\PhpRenderer.php(184): Slim\Views\PhpRenderer->protectedIncludeScope('templates/root/...', Array)
+#1 C:\xampp\htdocs\churchcrm\vendor\slim\php-view\src\PhpRenderer.php(153): Slim\Views\PhpRenderer->fetchTemplate('dashboard.php', Array)
+#2 C:\xampp\htdocs\churchcrm\vendor\slim\php-view\src\PhpRenderer.php(54): Slim\Views\PhpRenderer->fetch('dashboard.php', Array, true)
+#3 C:\xampp\htdocs\churchcrm\v2\routes\root.php(60): Slim\Views\PhpRenderer->render(Object(Slim\Http\Response), 'dashboard.php', Array)
+#4 [internal function]: viewDashboard(Object(Slim\Http\Request), Object(Slim\Http\Response), Array)
+#5 C:\xampp\htdocs\churchcrm\vendor\slim\slim\Slim\Handlers\Strategies\RequestResponse.php(40): call_user_func('viewDashboard', Object(Slim\Http\Request), Object(Slim\Http\Response), Array)
+#6 C:\xampp\htdocs\churchcrm\vendor\slim\slim\Slim\Route.php(281): Slim\Handlers\Strategies\RequestResponse->__invoke('viewDashboard', Object(Slim\Http\Request), Object(Slim\Http\Response), Array)
+#7 C:\xampp\htdocs\churchcrm\vendor\slim\slim\Slim\MiddlewareAwareTrait.php(117): Slim\Route->__invoke(Object(Slim\Http\Request), Object(Slim\Http\Response))
+#8 C:\xampp\htdocs\churchcrm\vendor\slim\slim\Slim\Route.php(268): Slim\Route->callMiddlewareStack(Object(Slim\Http\Request), Object(Slim\Http\Response))
+#9 C:\xampp\htdocs\churchcrm\vendor\slim\slim\Slim\App.php(503): Slim\Route->run(Object(Slim\Http\Request), Object(Slim\Http\Response))
+#10 C:\xampp\htdocs\churchcrm\ChurchCRM\Slim\Middleware\VersionMiddleware.php(13): Slim\App->__invoke(Object(Slim\Http\Request), Object(Slim\Http\Response))
+#11 [internal function]: ChurchCRM\Slim\Middleware\VersionMiddleware->__invoke(Object(Slim\Http\Request), Object(Slim\Http\Response), Object(Slim\App))
+#12 C:\xampp\htdocs\churchcrm\vendor\slim\slim\Slim\DeferredCallable.php(57): call_user_func_array(Object(ChurchCRM\Slim\Middleware\VersionMiddleware), Array)
+#13 [internal function]: Slim\DeferredCallable->__invoke(Object(Slim\Http\Request), Object(Slim\Http\Response), Object(Slim\App))
+#14 C:\xampp\htdocs\churchcrm\vendor\slim\slim\Slim\MiddlewareAwareTrait.php(70): call_user_func(Object(Slim\DeferredCallable), Object(Slim\Http\Request), Object(Slim\Http\Response), Object(Slim\App))
+#15 C:\xampp\htdocs\churchcrm\ChurchCRM\Slim\Middleware\AuthMiddleware.php(34): Slim\App->Slim\{closure}(Object(Slim\Http\Request), Object(Slim\Http\Response))
+#16 [internal function]: ChurchCRM\Slim\Middleware\AuthMiddleware->__invoke(Object(Slim\Http\Request), Object(Slim\Http\Response), Object(Closure))
+#17 C:\xampp\htdocs\churchcrm\vendor\slim\slim\Slim\DeferredCallable.php(57): call_user_func_array(Object(ChurchCRM\Slim\Middleware\AuthMiddleware), Array)
+#18 [internal function]: Slim\DeferredCallable->__invoke(Object(Slim\Http\Request), Object(Slim\Http\Response), Object(Closure))
+#19 C:\xampp\htdocs\churchcrm\vendor\slim\slim\Slim\MiddlewareAwareTrait.php(70): call_user_func(Object(Slim\DeferredCallable), Object(Slim\Http\Request), Object(Slim\Http\Response), Object(Closure))
+#20 C:\xampp\htdocs\churchcrm\vendor\slim\slim\Slim\MiddlewareAwareTrait.php(117): Slim\App->Slim\{closure}(Object(Slim\Http\Request), Object(Slim\Http\Response))
+#21 C:\xampp\htdocs\churchcrm\vendor\slim\slim\Slim\App.php(392): Slim\App->callMiddlewareStack(Object(Slim\Http\Request), Object(Slim\Http\Response))
+#22 C:\xampp\htdocs\churchcrm\vendor\slim\slim\Slim\App.php(297): Slim\App->process(Object(Slim\Http\Request), Object(Slim\Http\Response))
+#23 C:\xampp\htdocs\churchcrm\v2\index.php(48): Slim\App->run()
+#24 {main}
+View in rendered output by enabling the "displayErrorDetails" setting.
+
+[10-Feb-2021 23:38:15 UTC] Slim Application Error:
+Type: Error
+Message: Call to undefined function getTranslation()
+File: C:\xampp\htdocs\churchcrm\v2\templates\root\dashboard.php
+Line: 22
+Trace: #0 C:\xampp\htdocs\churchcrm\vendor\slim\php-view\src\PhpRenderer.php(203): include()
+#1 C:\xampp\htdocs\churchcrm\vendor\slim\php-view\src\PhpRenderer.php(184): Slim\Views\PhpRenderer->protectedIncludeScope('templates/root/...', Array)
+#2 C:\xampp\htdocs\churchcrm\vendor\slim\php-view\src\PhpRenderer.php(153): Slim\Views\PhpRenderer->fetchTemplate('dashboard.php', Array)
+#3 C:\xampp\htdocs\churchcrm\vendor\slim\php-view\src\PhpRenderer.php(54): Slim\Views\PhpRenderer->fetch('dashboard.php', Array, true)
+#4 C:\xampp\htdocs\churchcrm\v2\routes\root.php(60): Slim\Views\PhpRenderer->render(Object(Slim\Http\Response), 'dashboard.php', Array)
+#5 [internal function]: viewDashboard(Object(Slim\Http\Request), Object(Slim\Http\Response), Array)
+#6 C:\xampp\htdocs\churchcrm\vendor\slim\slim\Slim\Handlers\Strategies\RequestResponse.php(40): call_user_func('viewDashboard', Object(Slim\Http\Request), Object(Slim\Http\Response), Array)
+#7 C:\xampp\htdocs\churchcrm\vendor\slim\slim\Slim\Route.php(281): Slim\Handlers\Strategies\RequestResponse->__invoke('viewDashboard', Object(Slim\Http\Request), Object(Slim\Http\Response), Array)
+#8 C:\xampp\htdocs\churchcrm\vendor\slim\slim\Slim\MiddlewareAwareTrait.php(117): Slim\Route->__invoke(Object(Slim\Http\Request), Object(Slim\Http\Response))
+#9 C:\xampp\htdocs\churchcrm\vendor\slim\slim\Slim\Route.php(268): Slim\Route->callMiddlewareStack(Object(Slim\Http\Request), Object(Slim\Http\Response))
+#10 C:\xampp\htdocs\churchcrm\vendor\slim\slim\Slim\App.php(503): Slim\Route->run(Object(Slim\Http\Request), Object(Slim\Http\Response))
+#11 C:\xampp\htdocs\churchcrm\ChurchCRM\Slim\Middleware\VersionMiddleware.php(13): Slim\App->__invoke(Object(Slim\Http\Request), Object(Slim\Http\Response))
+#12 [internal function]: ChurchCRM\Slim\Middleware\VersionMiddleware->__invoke(Object(Slim\Http\Request), Object(Slim\Http\Response), Object(Slim\App))
+#13 C:\xampp\htdocs\churchcrm\vendor\slim\slim\Slim\DeferredCallable.php(57): call_user_func_array(Object(ChurchCRM\Slim\Middleware\VersionMiddleware), Array)
+#14 [internal function]: Slim\DeferredCallable->__invoke(Object(Slim\Http\Request), Object(Slim\Http\Response), Object(Slim\App))
+#15 C:\xampp\htdocs\churchcrm\vendor\slim\slim\Slim\MiddlewareAwareTrait.php(70): call_user_func(Object(Slim\DeferredCallable), Object(Slim\Http\Request), Object(Slim\Http\Response), Object(Slim\App))
+#16 C:\xampp\htdocs\churchcrm\ChurchCRM\Slim\Middleware\AuthMiddleware.php(34): Slim\App->Slim\{closure}(Object(Slim\Http\Request), Object(Slim\Http\Response))
+#17 [internal function]: ChurchCRM\Slim\Middleware\AuthMiddleware->__invoke(Object(Slim\Http\Request), Object(Slim\Http\Response), Object(Closure))
+#18 C:\xampp\htdocs\churchcrm\vendor\slim\slim\Slim\DeferredCallable.php(57): call_user_func_array(Object(ChurchCRM\Slim\Middleware\AuthMiddleware), Array)
+#19 [internal function]: Slim\DeferredCallable->__invoke(Object(Slim\Http\Request), Object(Slim\Http\Response), Object(Closure))
+#20 C:\xampp\htdocs\churchcrm\vendor\slim\slim\Slim\MiddlewareAwareTrait.php(70): call_user_func(Object(Slim\DeferredCallable), Object(Slim\Http\Request), Object(Slim\Http\Response), Object(Closure))
+#21 C:\xampp\htdocs\churchcrm\vendor\slim\slim\Slim\MiddlewareAwareTrait.php(117): Slim\App->Slim\{closure}(Object(Slim\Http\Request), Object(Slim\Http\Response))
+#22 C:\xampp\htdocs\churchcrm\vendor\slim\slim\Slim\App.php(392): Slim\App->callMiddlewareStack(Object(Slim\Http\Request), Object(Slim\Http\Response))
+#23 C:\xampp\htdocs\churchcrm\vendor\slim\slim\Slim\App.php(297): Slim\App->process(Object(Slim\Http\Request), Object(Slim\Http\Response))
+#24 C:\xampp\htdocs\churchcrm\v2\index.php(48): Slim\App->run()
+#25 {main}
+View in rendered output by enabling the "displayErrorDetails" setting.
+
+[10-Feb-2021 23:38:32 UTC] Slim Application Error:
+Type: Error
+Message: Call to a member function find() on null
+File: C:\xampp\htdocs\churchcrm\Include\Header.php
+Line: 30
+Trace: #0 C:\xampp\htdocs\churchcrm\v2\templates\root\dashboard.php(22): Translate::getTranslation('Families')
+#1 C:\xampp\htdocs\churchcrm\vendor\slim\php-view\src\PhpRenderer.php(203): include('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\churchcrm\vendor\slim\php-view\src\PhpRenderer.php(184): Slim\Views\PhpRenderer->protectedIncludeScope('templates/root/...', Array)
+#3 C:\xampp\htdocs\churchcrm\vendor\slim\php-view\src\PhpRenderer.php(153): Slim\Views\PhpRenderer->fetchTemplate('dashboard.php', Array)
+#4 C:\xampp\htdocs\churchcrm\vendor\slim\php-view\src\PhpRenderer.php(54): Slim\Views\PhpRenderer->fetch('dashboard.php', Array, true)
+#5 C:\xampp\htdocs\churchcrm\v2\routes\root.php(60): Slim\Views\PhpRenderer->render(Object(Slim\Http\Response), 'dashboard.php', Array)
+#6 [internal function]: viewDashboard(Object(Slim\Http\Request), Object(Slim\Http\Response), Array)
+#7 C:\xampp\htdocs\churchcrm\vendor\slim\slim\Slim\Handlers\Strategies\RequestResponse.php(40): call_user_func('viewDashboard', Object(Slim\Http\Request), Object(Slim\Http\Response), Array)
+#8 C:\xampp\htdocs\churchcrm\vendor\slim\slim\Slim\Route.php(281): Slim\Handlers\Strategies\RequestResponse->__invoke('viewDashboard', Object(Slim\Http\Request), Object(Slim\Http\Response), Array)
+#9 C:\xampp\htdocs\churchcrm\vendor\slim\slim\Slim\MiddlewareAwareTrait.php(117): Slim\Route->__invoke(Object(Slim\Http\Request), Object(Slim\Http\Response))
+#10 C:\xampp\htdocs\churchcrm\vendor\slim\slim\Slim\Route.php(268): Slim\Route->callMiddlewareStack(Object(Slim\Http\Request), Object(Slim\Http\Response))
+#11 C:\xampp\htdocs\churchcrm\vendor\slim\slim\Slim\App.php(503): Slim\Route->run(Object(Slim\Http\Request), Object(Slim\Http\Response))
+#12 C:\xampp\htdocs\churchcrm\ChurchCRM\Slim\Middleware\VersionMiddleware.php(13): Slim\App->__invoke(Object(Slim\Http\Request), Object(Slim\Http\Response))
+#13 [internal function]: ChurchCRM\Slim\Middleware\VersionMiddleware->__invoke(Object(Slim\Http\Request), Object(Slim\Http\Response), Object(Slim\App))
+#14 C:\xampp\htdocs\churchcrm\vendor\slim\slim\Slim\DeferredCallable.php(57): call_user_func_array(Object(ChurchCRM\Slim\Middleware\VersionMiddleware), Array)
+#15 [internal function]: Slim\DeferredCallable->__invoke(Object(Slim\Http\Request), Object(Slim\Http\Response), Object(Slim\App))
+#16 C:\xampp\htdocs\churchcrm\vendor\slim\slim\Slim\MiddlewareAwareTrait.php(70): call_user_func(Object(Slim\DeferredCallable), Object(Slim\Http\Request), Object(Slim\Http\Response), Object(Slim\App))
+#17 C:\xampp\htdocs\churchcrm\ChurchCRM\Slim\Middleware\AuthMiddleware.php(34): Slim\App->Slim\{closure}(Object(Slim\Http\Request), Object(Slim\Http\Response))
+#18 [internal function]: ChurchCRM\Slim\Middleware\AuthMiddleware->__invoke(Object(Slim\Http\Request), Object(Slim\Http\Response), Object(Closure))
+#19 C:\xampp\htdocs\churchcrm\vendor\slim\slim\Slim\DeferredCallable.php(57): call_user_func_array(Object(ChurchCRM\Slim\Middleware\AuthMiddleware), Array)
+#20 [internal function]: Slim\DeferredCallable->__invoke(Object(Slim\Http\Request), Object(Slim\Http\Response), Object(Closure))
+#21 C:\xampp\htdocs\churchcrm\vendor\slim\slim\Slim\MiddlewareAwareTrait.php(70): call_user_func(Object(Slim\DeferredCallable), Object(Slim\Http\Request), Object(Slim\Http\Response), Object(Closure))
+#22 C:\xampp\htdocs\churchcrm\vendor\slim\slim\Slim\MiddlewareAwareTrait.php(117): Slim\App->Slim\{closure}(Object(Slim\Http\Request), Object(Slim\Http\Response))
+#23 C:\xampp\htdocs\churchcrm\vendor\slim\slim\Slim\App.php(392): Slim\App->callMiddlewareStack(Object(Slim\Http\Request), Object(Slim\Http\Response))
+#24 C:\xampp\htdocs\churchcrm\vendor\slim\slim\Slim\App.php(297): Slim\App->process(Object(Slim\Http\Request), Object(Slim\Http\Response))
+#25 C:\xampp\htdocs\churchcrm\v2\index.php(48): Slim\App->run()
+#26 {main}
+View in rendered output by enabling the "displayErrorDetails" setting.
+
+[10-Feb-2021 23:39:00 UTC] Slim Application Error:
+Type: Error
+Message: Call to a member function find() on null
+File: C:\xampp\htdocs\churchcrm\Include\Header.php
+Line: 30
+Trace: #0 C:\xampp\htdocs\churchcrm\v2\templates\root\dashboard.php(9): Translate::getTranslation('Families')
+#1 C:\xampp\htdocs\churchcrm\vendor\slim\php-view\src\PhpRenderer.php(203): include('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\churchcrm\vendor\slim\php-view\src\PhpRenderer.php(184): Slim\Views\PhpRenderer->protectedIncludeScope('templates/root/...', Array)
+#3 C:\xampp\htdocs\churchcrm\vendor\slim\php-view\src\PhpRenderer.php(153): Slim\Views\PhpRenderer->fetchTemplate('dashboard.php', Array)
+#4 C:\xampp\htdocs\churchcrm\vendor\slim\php-view\src\PhpRenderer.php(54): Slim\Views\PhpRenderer->fetch('dashboard.php', Array, true)
+#5 C:\xampp\htdocs\churchcrm\v2\routes\root.php(60): Slim\Views\PhpRenderer->render(Object(Slim\Http\Response), 'dashboard.php', Array)
+#6 [internal function]: viewDashboard(Object(Slim\Http\Request), Object(Slim\Http\Response), Array)
+#7 C:\xampp\htdocs\churchcrm\vendor\slim\slim\Slim\Handlers\Strategies\RequestResponse.php(40): call_user_func('viewDashboard', Object(Slim\Http\Request), Object(Slim\Http\Response), Array)
+#8 C:\xampp\htdocs\churchcrm\vendor\slim\slim\Slim\Route.php(281): Slim\Handlers\Strategies\RequestResponse->__invoke('viewDashboard', Object(Slim\Http\Request), Object(Slim\Http\Response), Array)
+#9 C:\xampp\htdocs\churchcrm\vendor\slim\slim\Slim\MiddlewareAwareTrait.php(117): Slim\Route->__invoke(Object(Slim\Http\Request), Object(Slim\Http\Response))
+#10 C:\xampp\htdocs\churchcrm\vendor\slim\slim\Slim\Route.php(268): Slim\Route->callMiddlewareStack(Object(Slim\Http\Request), Object(Slim\Http\Response))
+#11 C:\xampp\htdocs\churchcrm\vendor\slim\slim\Slim\App.php(503): Slim\Route->run(Object(Slim\Http\Request), Object(Slim\Http\Response))
+#12 C:\xampp\htdocs\churchcrm\ChurchCRM\Slim\Middleware\VersionMiddleware.php(13): Slim\App->__invoke(Object(Slim\Http\Request), Object(Slim\Http\Response))
+#13 [internal function]: ChurchCRM\Slim\Middleware\VersionMiddleware->__invoke(Object(Slim\Http\Request), Object(Slim\Http\Response), Object(Slim\App))
+#14 C:\xampp\htdocs\churchcrm\vendor\slim\slim\Slim\DeferredCallable.php(57): call_user_func_array(Object(ChurchCRM\Slim\Middleware\VersionMiddleware), Array)
+#15 [internal function]: Slim\DeferredCallable->__invoke(Object(Slim\Http\Request), Object(Slim\Http\Response), Object(Slim\App))
+#16 C:\xampp\htdocs\churchcrm\vendor\slim\slim\Slim\MiddlewareAwareTrait.php(70): call_user_func(Object(Slim\DeferredCallable), Object(Slim\Http\Request), Object(Slim\Http\Response), Object(Slim\App))
+#17 C:\xampp\htdocs\churchcrm\ChurchCRM\Slim\Middleware\AuthMiddleware.php(34): Slim\App->Slim\{closure}(Object(Slim\Http\Request), Object(Slim\Http\Response))
+#18 [internal function]: ChurchCRM\Slim\Middleware\AuthMiddleware->__invoke(Object(Slim\Http\Request), Object(Slim\Http\Response), Object(Closure))
+#19 C:\xampp\htdocs\churchcrm\vendor\slim\slim\Slim\DeferredCallable.php(57): call_user_func_array(Object(ChurchCRM\Slim\Middleware\AuthMiddleware), Array)
+#20 [internal function]: Slim\DeferredCallable->__invoke(Object(Slim\Http\Request), Object(Slim\Http\Response), Object(Closure))
+#21 C:\xampp\htdocs\churchcrm\vendor\slim\slim\Slim\MiddlewareAwareTrait.php(70): call_user_func(Object(Slim\DeferredCallable), Object(Slim\Http\Request), Object(Slim\Http\Response), Object(Closure))
+#22 C:\xampp\htdocs\churchcrm\vendor\slim\slim\Slim\MiddlewareAwareTrait.php(117): Slim\App->Slim\{closure}(Object(Slim\Http\Request), Object(Slim\Http\Response))
+#23 C:\xampp\htdocs\churchcrm\vendor\slim\slim\Slim\App.php(392): Slim\App->callMiddlewareStack(Object(Slim\Http\Request), Object(Slim\Http\Response))
+#24 C:\xampp\htdocs\churchcrm\vendor\slim\slim\Slim\App.php(297): Slim\App->process(Object(Slim\Http\Request), Object(Slim\Http\Response))
+#25 C:\xampp\htdocs\churchcrm\v2\index.php(48): Slim\App->run()
+#26 {main}
+View in rendered output by enabling the "displayErrorDetails" setting.
+
+[10-Feb-2021 23:39:34 UTC] Slim Application Error:
+Type: Error
+Message: Call to a member function find() on null
+File: C:\xampp\htdocs\churchcrm\Include\Header.php
+Line: 30
+Trace: #0 C:\xampp\htdocs\churchcrm\v2\templates\root\dashboard.php(9): Translate::getTranslation('Families')
+#1 C:\xampp\htdocs\churchcrm\vendor\slim\php-view\src\PhpRenderer.php(203): include('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\churchcrm\vendor\slim\php-view\src\PhpRenderer.php(184): Slim\Views\PhpRenderer->protectedIncludeScope('templates/root/...', Array)
+#3 C:\xampp\htdocs\churchcrm\vendor\slim\php-view\src\PhpRenderer.php(153): Slim\Views\PhpRenderer->fetchTemplate('dashboard.php', Array)
+#4 C:\xampp\htdocs\churchcrm\vendor\slim\php-view\src\PhpRenderer.php(54): Slim\Views\PhpRenderer->fetch('dashboard.php', Array, true)
+#5 C:\xampp\htdocs\churchcrm\v2\routes\root.php(60): Slim\Views\PhpRenderer->render(Object(Slim\Http\Response), 'dashboard.php', Array)
+#6 [internal function]: viewDashboard(Object(Slim\Http\Request), Object(Slim\Http\Response), Array)
+#7 C:\xampp\htdocs\churchcrm\vendor\slim\slim\Slim\Handlers\Strategies\RequestResponse.php(40): call_user_func('viewDashboard', Object(Slim\Http\Request), Object(Slim\Http\Response), Array)
+#8 C:\xampp\htdocs\churchcrm\vendor\slim\slim\Slim\Route.php(281): Slim\Handlers\Strategies\RequestResponse->__invoke('viewDashboard', Object(Slim\Http\Request), Object(Slim\Http\Response), Array)
+#9 C:\xampp\htdocs\churchcrm\vendor\slim\slim\Slim\MiddlewareAwareTrait.php(117): Slim\Route->__invoke(Object(Slim\Http\Request), Object(Slim\Http\Response))
+#10 C:\xampp\htdocs\churchcrm\vendor\slim\slim\Slim\Route.php(268): Slim\Route->callMiddlewareStack(Object(Slim\Http\Request), Object(Slim\Http\Response))
+#11 C:\xampp\htdocs\churchcrm\vendor\slim\slim\Slim\App.php(503): Slim\Route->run(Object(Slim\Http\Request), Object(Slim\Http\Response))
+#12 C:\xampp\htdocs\churchcrm\ChurchCRM\Slim\Middleware\VersionMiddleware.php(13): Slim\App->__invoke(Object(Slim\Http\Request), Object(Slim\Http\Response))
+#13 [internal function]: ChurchCRM\Slim\Middleware\VersionMiddleware->__invoke(Object(Slim\Http\Request), Object(Slim\Http\Response), Object(Slim\App))
+#14 C:\xampp\htdocs\churchcrm\vendor\slim\slim\Slim\DeferredCallable.php(57): call_user_func_array(Object(ChurchCRM\Slim\Middleware\VersionMiddleware), Array)
+#15 [internal function]: Slim\DeferredCallable->__invoke(Object(Slim\Http\Request), Object(Slim\Http\Response), Object(Slim\App))
+#16 C:\xampp\htdocs\churchcrm\vendor\slim\slim\Slim\MiddlewareAwareTrait.php(70): call_user_func(Object(Slim\DeferredCallable), Object(Slim\Http\Request), Object(Slim\Http\Response), Object(Slim\App))
+#17 C:\xampp\htdocs\churchcrm\ChurchCRM\Slim\Middleware\AuthMiddleware.php(34): Slim\App->Slim\{closure}(Object(Slim\Http\Request), Object(Slim\Http\Response))
+#18 [internal function]: ChurchCRM\Slim\Middleware\AuthMiddleware->__invoke(Object(Slim\Http\Request), Object(Slim\Http\Response), Object(Closure))
+#19 C:\xampp\htdocs\churchcrm\vendor\slim\slim\Slim\DeferredCallable.php(57): call_user_func_array(Object(ChurchCRM\Slim\Middleware\AuthMiddleware), Array)
+#20 [internal function]: Slim\DeferredCallable->__invoke(Object(Slim\Http\Request), Object(Slim\Http\Response), Object(Closure))
+#21 C:\xampp\htdocs\churchcrm\vendor\slim\slim\Slim\MiddlewareAwareTrait.php(70): call_user_func(Object(Slim\DeferredCallable), Object(Slim\Http\Request), Object(Slim\Http\Response), Object(Closure))
+#22 C:\xampp\htdocs\churchcrm\vendor\slim\slim\Slim\MiddlewareAwareTrait.php(117): Slim\App->Slim\{closure}(Object(Slim\Http\Request), Object(Slim\Http\Response))
+#23 C:\xampp\htdocs\churchcrm\vendor\slim\slim\Slim\App.php(392): Slim\App->callMiddlewareStack(Object(Slim\Http\Request), Object(Slim\Http\Response))
+#24 C:\xampp\htdocs\churchcrm\vendor\slim\slim\Slim\App.php(297): Slim\App->process(Object(Slim\Http\Request), Object(Slim\Http\Response))
+#25 C:\xampp\htdocs\churchcrm\v2\index.php(48): Slim\App->run()
+#26 {main}
+View in rendered output by enabling the "displayErrorDetails" setting.
+
+[10-Feb-2021 23:40:30 UTC] Slim Application Error:
+Type: Error
+Message: Class 'Ploader' not found
+File: C:\xampp\htdocs\churchcrm\Include\Header.php
+Line: 24
+Trace: #0 C:\xampp\htdocs\churchcrm\v2\templates\root\dashboard.php(9): Translate::init()
+#1 C:\xampp\htdocs\churchcrm\vendor\slim\php-view\src\PhpRenderer.php(203): include('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\churchcrm\vendor\slim\php-view\src\PhpRenderer.php(184): Slim\Views\PhpRenderer->protectedIncludeScope('templates/root/...', Array)
+#3 C:\xampp\htdocs\churchcrm\vendor\slim\php-view\src\PhpRenderer.php(153): Slim\Views\PhpRenderer->fetchTemplate('dashboard.php', Array)
+#4 C:\xampp\htdocs\churchcrm\vendor\slim\php-view\src\PhpRenderer.php(54): Slim\Views\PhpRenderer->fetch('dashboard.php', Array, true)
+#5 C:\xampp\htdocs\churchcrm\v2\routes\root.php(60): Slim\Views\PhpRenderer->render(Object(Slim\Http\Response), 'dashboard.php', Array)
+#6 [internal function]: viewDashboard(Object(Slim\Http\Request), Object(Slim\Http\Response), Array)
+#7 C:\xampp\htdocs\churchcrm\vendor\slim\slim\Slim\Handlers\Strategies\RequestResponse.php(40): call_user_func('viewDashboard', Object(Slim\Http\Request), Object(Slim\Http\Response), Array)
+#8 C:\xampp\htdocs\churchcrm\vendor\slim\slim\Slim\Route.php(281): Slim\Handlers\Strategies\RequestResponse->__invoke('viewDashboard', Object(Slim\Http\Request), Object(Slim\Http\Response), Array)
+#9 C:\xampp\htdocs\churchcrm\vendor\slim\slim\Slim\MiddlewareAwareTrait.php(117): Slim\Route->__invoke(Object(Slim\Http\Request), Object(Slim\Http\Response))
+#10 C:\xampp\htdocs\churchcrm\vendor\slim\slim\Slim\Route.php(268): Slim\Route->callMiddlewareStack(Object(Slim\Http\Request), Object(Slim\Http\Response))
+#11 C:\xampp\htdocs\churchcrm\vendor\slim\slim\Slim\App.php(503): Slim\Route->run(Object(Slim\Http\Request), Object(Slim\Http\Response))
+#12 C:\xampp\htdocs\churchcrm\ChurchCRM\Slim\Middleware\VersionMiddleware.php(13): Slim\App->__invoke(Object(Slim\Http\Request), Object(Slim\Http\Response))
+#13 [internal function]: ChurchCRM\Slim\Middleware\VersionMiddleware->__invoke(Object(Slim\Http\Request), Object(Slim\Http\Response), Object(Slim\App))
+#14 C:\xampp\htdocs\churchcrm\vendor\slim\slim\Slim\DeferredCallable.php(57): call_user_func_array(Object(ChurchCRM\Slim\Middleware\VersionMiddleware), Array)
+#15 [internal function]: Slim\DeferredCallable->__invoke(Object(Slim\Http\Request), Object(Slim\Http\Response), Object(Slim\App))
+#16 C:\xampp\htdocs\churchcrm\vendor\slim\slim\Slim\MiddlewareAwareTrait.php(70): call_user_func(Object(Slim\DeferredCallable), Object(Slim\Http\Request), Object(Slim\Http\Response), Object(Slim\App))
+#17 C:\xampp\htdocs\churchcrm\ChurchCRM\Slim\Middleware\AuthMiddleware.php(34): Slim\App->Slim\{closure}(Object(Slim\Http\Request), Object(Slim\Http\Response))
+#18 [internal function]: ChurchCRM\Slim\Middleware\AuthMiddleware->__invoke(Object(Slim\Http\Request), Object(Slim\Http\Response), Object(Closure))
+#19 C:\xampp\htdocs\churchcrm\vendor\slim\slim\Slim\DeferredCallable.php(57): call_user_func_array(Object(ChurchCRM\Slim\Middleware\AuthMiddleware), Array)
+#20 [internal function]: Slim\DeferredCallable->__invoke(Object(Slim\Http\Request), Object(Slim\Http\Response), Object(Closure))
+#21 C:\xampp\htdocs\churchcrm\vendor\slim\slim\Slim\MiddlewareAwareTrait.php(70): call_user_func(Object(Slim\DeferredCallable), Object(Slim\Http\Request), Object(Slim\Http\Response), Object(Closure))
+#22 C:\xampp\htdocs\churchcrm\vendor\slim\slim\Slim\MiddlewareAwareTrait.php(117): Slim\App->Slim\{closure}(Object(Slim\Http\Request), Object(Slim\Http\Response))
+#23 C:\xampp\htdocs\churchcrm\vendor\slim\slim\Slim\App.php(392): Slim\App->callMiddlewareStack(Object(Slim\Http\Request), Object(Slim\Http\Response))
+#24 C:\xampp\htdocs\churchcrm\vendor\slim\slim\Slim\App.php(297): Slim\App->process(Object(Slim\Http\Request), Object(Slim\Http\Response))
+#25 C:\xampp\htdocs\churchcrm\v2\index.php(48): Slim\App->run()
+#26 {main}
+View in rendered output by enabling the "displayErrorDetails" setting.
+
+[10-Feb-2021 23:40:48 UTC] Slim Application Error:
+Type: Error
+Message: Class 'Ploader' not found
+File: C:\xampp\htdocs\churchcrm\Include\Header.php
+Line: 25
+Trace: #0 C:\xampp\htdocs\churchcrm\v2\templates\root\dashboard.php(9): Translate::init()
+#1 C:\xampp\htdocs\churchcrm\vendor\slim\php-view\src\PhpRenderer.php(203): include('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\churchcrm\vendor\slim\php-view\src\PhpRenderer.php(184): Slim\Views\PhpRenderer->protectedIncludeScope('templates/root/...', Array)
+#3 C:\xampp\htdocs\churchcrm\vendor\slim\php-view\src\PhpRenderer.php(153): Slim\Views\PhpRenderer->fetchTemplate('dashboard.php', Array)
+#4 C:\xampp\htdocs\churchcrm\vendor\slim\php-view\src\PhpRenderer.php(54): Slim\Views\PhpRenderer->fetch('dashboard.php', Array, true)
+#5 C:\xampp\htdocs\churchcrm\v2\routes\root.php(60): Slim\Views\PhpRenderer->render(Object(Slim\Http\Response), 'dashboard.php', Array)
+#6 [internal function]: viewDashboard(Object(Slim\Http\Request), Object(Slim\Http\Response), Array)
+#7 C:\xampp\htdocs\churchcrm\vendor\slim\slim\Slim\Handlers\Strategies\RequestResponse.php(40): call_user_func('viewDashboard', Object(Slim\Http\Request), Object(Slim\Http\Response), Array)
+#8 C:\xampp\htdocs\churchcrm\vendor\slim\slim\Slim\Route.php(281): Slim\Handlers\Strategies\RequestResponse->__invoke('viewDashboard', Object(Slim\Http\Request), Object(Slim\Http\Response), Array)
+#9 C:\xampp\htdocs\churchcrm\vendor\slim\slim\Slim\MiddlewareAwareTrait.php(117): Slim\Route->__invoke(Object(Slim\Http\Request), Object(Slim\Http\Response))
+#10 C:\xampp\htdocs\churchcrm\vendor\slim\slim\Slim\Route.php(268): Slim\Route->callMiddlewareStack(Object(Slim\Http\Request), Object(Slim\Http\Response))
+#11 C:\xampp\htdocs\churchcrm\vendor\slim\slim\Slim\App.php(503): Slim\Route->run(Object(Slim\Http\Request), Object(Slim\Http\Response))
+#12 C:\xampp\htdocs\churchcrm\ChurchCRM\Slim\Middleware\VersionMiddleware.php(13): Slim\App->__invoke(Object(Slim\Http\Request), Object(Slim\Http\Response))
+#13 [internal function]: ChurchCRM\Slim\Middleware\VersionMiddleware->__invoke(Object(Slim\Http\Request), Object(Slim\Http\Response), Object(Slim\App))
+#14 C:\xampp\htdocs\churchcrm\vendor\slim\slim\Slim\DeferredCallable.php(57): call_user_func_array(Object(ChurchCRM\Slim\Middleware\VersionMiddleware), Array)
+#15 [internal function]: Slim\DeferredCallable->__invoke(Object(Slim\Http\Request), Object(Slim\Http\Response), Object(Slim\App))
+#16 C:\xampp\htdocs\churchcrm\vendor\slim\slim\Slim\MiddlewareAwareTrait.php(70): call_user_func(Object(Slim\DeferredCallable), Object(Slim\Http\Request), Object(Slim\Http\Response), Object(Slim\App))
+#17 C:\xampp\htdocs\churchcrm\ChurchCRM\Slim\Middleware\AuthMiddleware.php(34): Slim\App->Slim\{closure}(Object(Slim\Http\Request), Object(Slim\Http\Response))
+#18 [internal function]: ChurchCRM\Slim\Middleware\AuthMiddleware->__invoke(Object(Slim\Http\Request), Object(Slim\Http\Response), Object(Closure))
+#19 C:\xampp\htdocs\churchcrm\vendor\slim\slim\Slim\DeferredCallable.php(57): call_user_func_array(Object(ChurchCRM\Slim\Middleware\AuthMiddleware), Array)
+#20 [internal function]: Slim\DeferredCallable->__invoke(Object(Slim\Http\Request), Object(Slim\Http\Response), Object(Closure))
+#21 C:\xampp\htdocs\churchcrm\vendor\slim\slim\Slim\MiddlewareAwareTrait.php(70): call_user_func(Object(Slim\DeferredCallable), Object(Slim\Http\Request), Object(Slim\Http\Response), Object(Closure))
+#22 C:\xampp\htdocs\churchcrm\vendor\slim\slim\Slim\MiddlewareAwareTrait.php(117): Slim\App->Slim\{closure}(Object(Slim\Http\Request), Object(Slim\Http\Response))
+#23 C:\xampp\htdocs\churchcrm\vendor\slim\slim\Slim\App.php(392): Slim\App->callMiddlewareStack(Object(Slim\Http\Request), Object(Slim\Http\Response))
+#24 C:\xampp\htdocs\churchcrm\vendor\slim\slim\Slim\App.php(297): Slim\App->process(Object(Slim\Http\Request), Object(Slim\Http\Response))
+#25 C:\xampp\htdocs\churchcrm\v2\index.php(48): Slim\App->run()
+#26 {main}
+View in rendered output by enabling the "displayErrorDetails" setting.
+
+[10-Feb-2021 23:40:53 UTC] Slim Application Error:
+Type: Error
+Message: Class 'Ploader' not found
+File: C:\xampp\htdocs\churchcrm\Include\Header.php
+Line: 25
+Trace: #0 C:\xampp\htdocs\churchcrm\v2\templates\root\dashboard.php(9): Translate::init()
+#1 C:\xampp\htdocs\churchcrm\vendor\slim\php-view\src\PhpRenderer.php(203): include('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\churchcrm\vendor\slim\php-view\src\PhpRenderer.php(184): Slim\Views\PhpRenderer->protectedIncludeScope('templates/root/...', Array)
+#3 C:\xampp\htdocs\churchcrm\vendor\slim\php-view\src\PhpRenderer.php(153): Slim\Views\PhpRenderer->fetchTemplate('dashboard.php', Array)
+#4 C:\xampp\htdocs\churchcrm\vendor\slim\php-view\src\PhpRenderer.php(54): Slim\Views\PhpRenderer->fetch('dashboard.php', Array, true)
+#5 C:\xampp\htdocs\churchcrm\v2\routes\root.php(60): Slim\Views\PhpRenderer->render(Object(Slim\Http\Response), 'dashboard.php', Array)
+#6 [internal function]: viewDashboard(Object(Slim\Http\Request), Object(Slim\Http\Response), Array)
+#7 C:\xampp\htdocs\churchcrm\vendor\slim\slim\Slim\Handlers\Strategies\RequestResponse.php(40): call_user_func('viewDashboard', Object(Slim\Http\Request), Object(Slim\Http\Response), Array)
+#8 C:\xampp\htdocs\churchcrm\vendor\slim\slim\Slim\Route.php(281): Slim\Handlers\Strategies\RequestResponse->__invoke('viewDashboard', Object(Slim\Http\Request), Object(Slim\Http\Response), Array)
+#9 C:\xampp\htdocs\churchcrm\vendor\slim\slim\Slim\MiddlewareAwareTrait.php(117): Slim\Route->__invoke(Object(Slim\Http\Request), Object(Slim\Http\Response))
+#10 C:\xampp\htdocs\churchcrm\vendor\slim\slim\Slim\Route.php(268): Slim\Route->callMiddlewareStack(Object(Slim\Http\Request), Object(Slim\Http\Response))
+#11 C:\xampp\htdocs\churchcrm\vendor\slim\slim\Slim\App.php(503): Slim\Route->run(Object(Slim\Http\Request), Object(Slim\Http\Response))
+#12 C:\xampp\htdocs\churchcrm\ChurchCRM\Slim\Middleware\VersionMiddleware.php(13): Slim\App->__invoke(Object(Slim\Http\Request), Object(Slim\Http\Response))
+#13 [internal function]: ChurchCRM\Slim\Middleware\VersionMiddleware->__invoke(Object(Slim\Http\Request), Object(Slim\Http\Response), Object(Slim\App))
+#14 C:\xampp\htdocs\churchcrm\vendor\slim\slim\Slim\DeferredCallable.php(57): call_user_func_array(Object(ChurchCRM\Slim\Middleware\VersionMiddleware), Array)
+#15 [internal function]: Slim\DeferredCallable->__invoke(Object(Slim\Http\Request), Object(Slim\Http\Response), Object(Slim\App))
+#16 C:\xampp\htdocs\churchcrm\vendor\slim\slim\Slim\MiddlewareAwareTrait.php(70): call_user_func(Object(Slim\DeferredCallable), Object(Slim\Http\Request), Object(Slim\Http\Response), Object(Slim\App))
+#17 C:\xampp\htdocs\churchcrm\ChurchCRM\Slim\Middleware\AuthMiddleware.php(34): Slim\App->Slim\{closure}(Object(Slim\Http\Request), Object(Slim\Http\Response))
+#18 [internal function]: ChurchCRM\Slim\Middleware\AuthMiddleware->__invoke(Object(Slim\Http\Request), Object(Slim\Http\Response), Object(Closure))
+#19 C:\xampp\htdocs\churchcrm\vendor\slim\slim\Slim\DeferredCallable.php(57): call_user_func_array(Object(ChurchCRM\Slim\Middleware\AuthMiddleware), Array)
+#20 [internal function]: Slim\DeferredCallable->__invoke(Object(Slim\Http\Request), Object(Slim\Http\Response), Object(Closure))
+#21 C:\xampp\htdocs\churchcrm\vendor\slim\slim\Slim\MiddlewareAwareTrait.php(70): call_user_func(Object(Slim\DeferredCallable), Object(Slim\Http\Request), Object(Slim\Http\Response), Object(Closure))
+#22 C:\xampp\htdocs\churchcrm\vendor\slim\slim\Slim\MiddlewareAwareTrait.php(117): Slim\App->Slim\{closure}(Object(Slim\Http\Request), Object(Slim\Http\Response))
+#23 C:\xampp\htdocs\churchcrm\vendor\slim\slim\Slim\App.php(392): Slim\App->callMiddlewareStack(Object(Slim\Http\Request), Object(Slim\Http\Response))
+#24 C:\xampp\htdocs\churchcrm\vendor\slim\slim\Slim\App.php(297): Slim\App->process(Object(Slim\Http\Request), Object(Slim\Http\Response))
+#25 C:\xampp\htdocs\churchcrm\v2\index.php(48): Slim\App->run()
+#26 {main}
+View in rendered output by enabling the "displayErrorDetails" setting.
+
+[10-Feb-2021 23:41:44 UTC] Slim Application Error:
+Type: Error
+Message: Class 'Ploader' not found
+File: C:\xampp\htdocs\churchcrm\Include\Header.php
+Line: 25
+Trace: #0 C:\xampp\htdocs\churchcrm\v2\templates\root\dashboard.php(9): Translate::init()
+#1 C:\xampp\htdocs\churchcrm\vendor\slim\php-view\src\PhpRenderer.php(203): include('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\churchcrm\vendor\slim\php-view\src\PhpRenderer.php(184): Slim\Views\PhpRenderer->protectedIncludeScope('templates/root/...', Array)
+#3 C:\xampp\htdocs\churchcrm\vendor\slim\php-view\src\PhpRenderer.php(153): Slim\Views\PhpRenderer->fetchTemplate('dashboard.php', Array)
+#4 C:\xampp\htdocs\churchcrm\vendor\slim\php-view\src\PhpRenderer.php(54): Slim\Views\PhpRenderer->fetch('dashboard.php', Array, true)
+#5 C:\xampp\htdocs\churchcrm\v2\routes\root.php(60): Slim\Views\PhpRenderer->render(Object(Slim\Http\Response), 'dashboard.php', Array)
+#6 [internal function]: viewDashboard(Object(Slim\Http\Request), Object(Slim\Http\Response), Array)
+#7 C:\xampp\htdocs\churchcrm\vendor\slim\slim\Slim\Handlers\Strategies\RequestResponse.php(40): call_user_func('viewDashboard', Object(Slim\Http\Request), Object(Slim\Http\Response), Array)
+#8 C:\xampp\htdocs\churchcrm\vendor\slim\slim\Slim\Route.php(281): Slim\Handlers\Strategies\RequestResponse->__invoke('viewDashboard', Object(Slim\Http\Request), Object(Slim\Http\Response), Array)
+#9 C:\xampp\htdocs\churchcrm\vendor\slim\slim\Slim\MiddlewareAwareTrait.php(117): Slim\Route->__invoke(Object(Slim\Http\Request), Object(Slim\Http\Response))
+#10 C:\xampp\htdocs\churchcrm\vendor\slim\slim\Slim\Route.php(268): Slim\Route->callMiddlewareStack(Object(Slim\Http\Request), Object(Slim\Http\Response))
+#11 C:\xampp\htdocs\churchcrm\vendor\slim\slim\Slim\App.php(503): Slim\Route->run(Object(Slim\Http\Request), Object(Slim\Http\Response))
+#12 C:\xampp\htdocs\churchcrm\ChurchCRM\Slim\Middleware\VersionMiddleware.php(13): Slim\App->__invoke(Object(Slim\Http\Request), Object(Slim\Http\Response))
+#13 [internal function]: ChurchCRM\Slim\Middleware\VersionMiddleware->__invoke(Object(Slim\Http\Request), Object(Slim\Http\Response), Object(Slim\App))
+#14 C:\xampp\htdocs\churchcrm\vendor\slim\slim\Slim\DeferredCallable.php(57): call_user_func_array(Object(ChurchCRM\Slim\Middleware\VersionMiddleware), Array)
+#15 [internal function]: Slim\DeferredCallable->__invoke(Object(Slim\Http\Request), Object(Slim\Http\Response), Object(Slim\App))
+#16 C:\xampp\htdocs\churchcrm\vendor\slim\slim\Slim\MiddlewareAwareTrait.php(70): call_user_func(Object(Slim\DeferredCallable), Object(Slim\Http\Request), Object(Slim\Http\Response), Object(Slim\App))
+#17 C:\xampp\htdocs\churchcrm\ChurchCRM\Slim\Middleware\AuthMiddleware.php(34): Slim\App->Slim\{closure}(Object(Slim\Http\Request), Object(Slim\Http\Response))
+#18 [internal function]: ChurchCRM\Slim\Middleware\AuthMiddleware->__invoke(Object(Slim\Http\Request), Object(Slim\Http\Response), Object(Closure))
+#19 C:\xampp\htdocs\churchcrm\vendor\slim\slim\Slim\DeferredCallable.php(57): call_user_func_array(Object(ChurchCRM\Slim\Middleware\AuthMiddleware), Array)
+#20 [internal function]: Slim\DeferredCallable->__invoke(Object(Slim\Http\Request), Object(Slim\Http\Response), Object(Closure))
+#21 C:\xampp\htdocs\churchcrm\vendor\slim\slim\Slim\MiddlewareAwareTrait.php(70): call_user_func(Object(Slim\DeferredCallable), Object(Slim\Http\Request), Object(Slim\Http\Response), Object(Closure))
+#22 C:\xampp\htdocs\churchcrm\vendor\slim\slim\Slim\MiddlewareAwareTrait.php(117): Slim\App->Slim\{closure}(Object(Slim\Http\Request), Object(Slim\Http\Response))
+#23 C:\xampp\htdocs\churchcrm\vendor\slim\slim\Slim\App.php(392): Slim\App->callMiddlewareStack(Object(Slim\Http\Request), Object(Slim\Http\Response))
+#24 C:\xampp\htdocs\churchcrm\vendor\slim\slim\Slim\App.php(297): Slim\App->process(Object(Slim\Http\Request), Object(Slim\Http\Response))
+#25 C:\xampp\htdocs\churchcrm\v2\index.php(48): Slim\App->run()
+#26 {main}
+View in rendered output by enabling the "displayErrorDetails" setting.
+
+[10-Feb-2021 23:41:58 UTC] Slim Application Error:
+Type: Error
+Message: Class 'Ploader' not found
+File: C:\xampp\htdocs\churchcrm\Include\Header.php
+Line: 25
+Trace: #0 C:\xampp\htdocs\churchcrm\v2\templates\root\dashboard.php(9): Translate::init()
+#1 C:\xampp\htdocs\churchcrm\vendor\slim\php-view\src\PhpRenderer.php(203): include('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\churchcrm\vendor\slim\php-view\src\PhpRenderer.php(184): Slim\Views\PhpRenderer->protectedIncludeScope('templates/root/...', Array)
+#3 C:\xampp\htdocs\churchcrm\vendor\slim\php-view\src\PhpRenderer.php(153): Slim\Views\PhpRenderer->fetchTemplate('dashboard.php', Array)
+#4 C:\xampp\htdocs\churchcrm\vendor\slim\php-view\src\PhpRenderer.php(54): Slim\Views\PhpRenderer->fetch('dashboard.php', Array, true)
+#5 C:\xampp\htdocs\churchcrm\v2\routes\root.php(60): Slim\Views\PhpRenderer->render(Object(Slim\Http\Response), 'dashboard.php', Array)
+#6 [internal function]: viewDashboard(Object(Slim\Http\Request), Object(Slim\Http\Response), Array)
+#7 C:\xampp\htdocs\churchcrm\vendor\slim\slim\Slim\Handlers\Strategies\RequestResponse.php(40): call_user_func('viewDashboard', Object(Slim\Http\Request), Object(Slim\Http\Response), Array)
+#8 C:\xampp\htdocs\churchcrm\vendor\slim\slim\Slim\Route.php(281): Slim\Handlers\Strategies\RequestResponse->__invoke('viewDashboard', Object(Slim\Http\Request), Object(Slim\Http\Response), Array)
+#9 C:\xampp\htdocs\churchcrm\vendor\slim\slim\Slim\MiddlewareAwareTrait.php(117): Slim\Route->__invoke(Object(Slim\Http\Request), Object(Slim\Http\Response))
+#10 C:\xampp\htdocs\churchcrm\vendor\slim\slim\Slim\Route.php(268): Slim\Route->callMiddlewareStack(Object(Slim\Http\Request), Object(Slim\Http\Response))
+#11 C:\xampp\htdocs\churchcrm\vendor\slim\slim\Slim\App.php(503): Slim\Route->run(Object(Slim\Http\Request), Object(Slim\Http\Response))
+#12 C:\xampp\htdocs\churchcrm\ChurchCRM\Slim\Middleware\VersionMiddleware.php(13): Slim\App->__invoke(Object(Slim\Http\Request), Object(Slim\Http\Response))
+#13 [internal function]: ChurchCRM\Slim\Middleware\VersionMiddleware->__invoke(Object(Slim\Http\Request), Object(Slim\Http\Response), Object(Slim\App))
+#14 C:\xampp\htdocs\churchcrm\vendor\slim\slim\Slim\DeferredCallable.php(57): call_user_func_array(Object(ChurchCRM\Slim\Middleware\VersionMiddleware), Array)
+#15 [internal function]: Slim\DeferredCallable->__invoke(Object(Slim\Http\Request), Object(Slim\Http\Response), Object(Slim\App))
+#16 C:\xampp\htdocs\churchcrm\vendor\slim\slim\Slim\MiddlewareAwareTrait.php(70): call_user_func(Object(Slim\DeferredCallable), Object(Slim\Http\Request), Object(Slim\Http\Response), Object(Slim\App))
+#17 C:\xampp\htdocs\churchcrm\ChurchCRM\Slim\Middleware\AuthMiddleware.php(34): Slim\App->Slim\{closure}(Object(Slim\Http\Request), Object(Slim\Http\Response))
+#18 [internal function]: ChurchCRM\Slim\Middleware\AuthMiddleware->__invoke(Object(Slim\Http\Request), Object(Slim\Http\Response), Object(Closure))
+#19 C:\xampp\htdocs\churchcrm\vendor\slim\slim\Slim\DeferredCallable.php(57): call_user_func_array(Object(ChurchCRM\Slim\Middleware\AuthMiddleware), Array)
+#20 [internal function]: Slim\DeferredCallable->__invoke(Object(Slim\Http\Request), Object(Slim\Http\Response), Object(Closure))
+#21 C:\xampp\htdocs\churchcrm\vendor\slim\slim\Slim\MiddlewareAwareTrait.php(70): call_user_func(Object(Slim\DeferredCallable), Object(Slim\Http\Request), Object(Slim\Http\Response), Object(Closure))
+#22 C:\xampp\htdocs\churchcrm\vendor\slim\slim\Slim\MiddlewareAwareTrait.php(117): Slim\App->Slim\{closure}(Object(Slim\Http\Request), Object(Slim\Http\Response))
+#23 C:\xampp\htdocs\churchcrm\vendor\slim\slim\Slim\App.php(392): Slim\App->callMiddlewareStack(Object(Slim\Http\Request), Object(Slim\Http\Response))
+#24 C:\xampp\htdocs\churchcrm\vendor\slim\slim\Slim\App.php(297): Slim\App->process(Object(Slim\Http\Request), Object(Slim\Http\Response))
+#25 C:\xampp\htdocs\churchcrm\v2\index.php(48): Slim\App->run()
+#26 {main}
+View in rendered output by enabling the "displayErrorDetails" setting.
+
+[10-Feb-2021 23:43:20 UTC] Slim Application Error:
+Type: Error
+Message: Class 'Ploader' not found
+File: C:\xampp\htdocs\churchcrm\Include\Header.php
+Line: 17
+Trace: #0 C:\xampp\htdocs\churchcrm\v2\templates\root\dashboard.php(22): getTranslation('Families')
+#1 C:\xampp\htdocs\churchcrm\vendor\slim\php-view\src\PhpRenderer.php(203): include('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\churchcrm\vendor\slim\php-view\src\PhpRenderer.php(184): Slim\Views\PhpRenderer->protectedIncludeScope('templates/root/...', Array)
+#3 C:\xampp\htdocs\churchcrm\vendor\slim\php-view\src\PhpRenderer.php(153): Slim\Views\PhpRenderer->fetchTemplate('dashboard.php', Array)
+#4 C:\xampp\htdocs\churchcrm\vendor\slim\php-view\src\PhpRenderer.php(54): Slim\Views\PhpRenderer->fetch('dashboard.php', Array, true)
+#5 C:\xampp\htdocs\churchcrm\v2\routes\root.php(60): Slim\Views\PhpRenderer->render(Object(Slim\Http\Response), 'dashboard.php', Array)
+#6 [internal function]: viewDashboard(Object(Slim\Http\Request), Object(Slim\Http\Response), Array)
+#7 C:\xampp\htdocs\churchcrm\vendor\slim\slim\Slim\Handlers\Strategies\RequestResponse.php(40): call_user_func('viewDashboard', Object(Slim\Http\Request), Object(Slim\Http\Response), Array)
+#8 C:\xampp\htdocs\churchcrm\vendor\slim\slim\Slim\Route.php(281): Slim\Handlers\Strategies\RequestResponse->__invoke('viewDashboard', Object(Slim\Http\Request), Object(Slim\Http\Response), Array)
+#9 C:\xampp\htdocs\churchcrm\vendor\slim\slim\Slim\MiddlewareAwareTrait.php(117): Slim\Route->__invoke(Object(Slim\Http\Request), Object(Slim\Http\Response))
+#10 C:\xampp\htdocs\churchcrm\vendor\slim\slim\Slim\Route.php(268): Slim\Route->callMiddlewareStack(Object(Slim\Http\Request), Object(Slim\Http\Response))
+#11 C:\xampp\htdocs\churchcrm\vendor\slim\slim\Slim\App.php(503): Slim\Route->run(Object(Slim\Http\Request), Object(Slim\Http\Response))
+#12 C:\xampp\htdocs\churchcrm\ChurchCRM\Slim\Middleware\VersionMiddleware.php(13): Slim\App->__invoke(Object(Slim\Http\Request), Object(Slim\Http\Response))
+#13 [internal function]: ChurchCRM\Slim\Middleware\VersionMiddleware->__invoke(Object(Slim\Http\Request), Object(Slim\Http\Response), Object(Slim\App))
+#14 C:\xampp\htdocs\churchcrm\vendor\slim\slim\Slim\DeferredCallable.php(57): call_user_func_array(Object(ChurchCRM\Slim\Middleware\VersionMiddleware), Array)
+#15 [internal function]: Slim\DeferredCallable->__invoke(Object(Slim\Http\Request), Object(Slim\Http\Response), Object(Slim\App))
+#16 C:\xampp\htdocs\churchcrm\vendor\slim\slim\Slim\MiddlewareAwareTrait.php(70): call_user_func(Object(Slim\DeferredCallable), Object(Slim\Http\Request), Object(Slim\Http\Response), Object(Slim\App))
+#17 C:\xampp\htdocs\churchcrm\ChurchCRM\Slim\Middleware\AuthMiddleware.php(34): Slim\App->Slim\{closure}(Object(Slim\Http\Request), Object(Slim\Http\Response))
+#18 [internal function]: ChurchCRM\Slim\Middleware\AuthMiddleware->__invoke(Object(Slim\Http\Request), Object(Slim\Http\Response), Object(Closure))
+#19 C:\xampp\htdocs\churchcrm\vendor\slim\slim\Slim\DeferredCallable.php(57): call_user_func_array(Object(ChurchCRM\Slim\Middleware\AuthMiddleware), Array)
+#20 [internal function]: Slim\DeferredCallable->__invoke(Object(Slim\Http\Request), Object(Slim\Http\Response), Object(Closure))
+#21 C:\xampp\htdocs\churchcrm\vendor\slim\slim\Slim\MiddlewareAwareTrait.php(70): call_user_func(Object(Slim\DeferredCallable), Object(Slim\Http\Request), Object(Slim\Http\Response), Object(Closure))
+#22 C:\xampp\htdocs\churchcrm\vendor\slim\slim\Slim\MiddlewareAwareTrait.php(117): Slim\App->Slim\{closure}(Object(Slim\Http\Request), Object(Slim\Http\Response))
+#23 C:\xampp\htdocs\churchcrm\vendor\slim\slim\Slim\App.php(392): Slim\App->callMiddlewareStack(Object(Slim\Http\Request), Object(Slim\Http\Response))
+#24 C:\xampp\htdocs\churchcrm\vendor\slim\slim\Slim\App.php(297): Slim\App->process(Object(Slim\Http\Request), Object(Slim\Http\Response))
+#25 C:\xampp\htdocs\churchcrm\v2\index.php(48): Slim\App->run()
+#26 {main}
+View in rendered output by enabling the "displayErrorDetails" setting.
+
+[10-Feb-2021 23:43:27 UTC] Slim Application Error:
+Type: Error
+Message: Class 'Ploader' not found
+File: C:\xampp\htdocs\churchcrm\Include\Header.php
+Line: 17
+Trace: #0 C:\xampp\htdocs\churchcrm\v2\templates\root\dashboard.php(21): getTranslation('Families')
+#1 C:\xampp\htdocs\churchcrm\vendor\slim\php-view\src\PhpRenderer.php(203): include('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\churchcrm\vendor\slim\php-view\src\PhpRenderer.php(184): Slim\Views\PhpRenderer->protectedIncludeScope('templates/root/...', Array)
+#3 C:\xampp\htdocs\churchcrm\vendor\slim\php-view\src\PhpRenderer.php(153): Slim\Views\PhpRenderer->fetchTemplate('dashboard.php', Array)
+#4 C:\xampp\htdocs\churchcrm\vendor\slim\php-view\src\PhpRenderer.php(54): Slim\Views\PhpRenderer->fetch('dashboard.php', Array, true)
+#5 C:\xampp\htdocs\churchcrm\v2\routes\root.php(60): Slim\Views\PhpRenderer->render(Object(Slim\Http\Response), 'dashboard.php', Array)
+#6 [internal function]: viewDashboard(Object(Slim\Http\Request), Object(Slim\Http\Response), Array)
+#7 C:\xampp\htdocs\churchcrm\vendor\slim\slim\Slim\Handlers\Strategies\RequestResponse.php(40): call_user_func('viewDashboard', Object(Slim\Http\Request), Object(Slim\Http\Response), Array)
+#8 C:\xampp\htdocs\churchcrm\vendor\slim\slim\Slim\Route.php(281): Slim\Handlers\Strategies\RequestResponse->__invoke('viewDashboard', Object(Slim\Http\Request), Object(Slim\Http\Response), Array)
+#9 C:\xampp\htdocs\churchcrm\vendor\slim\slim\Slim\MiddlewareAwareTrait.php(117): Slim\Route->__invoke(Object(Slim\Http\Request), Object(Slim\Http\Response))
+#10 C:\xampp\htdocs\churchcrm\vendor\slim\slim\Slim\Route.php(268): Slim\Route->callMiddlewareStack(Object(Slim\Http\Request), Object(Slim\Http\Response))
+#11 C:\xampp\htdocs\churchcrm\vendor\slim\slim\Slim\App.php(503): Slim\Route->run(Object(Slim\Http\Request), Object(Slim\Http\Response))
+#12 C:\xampp\htdocs\churchcrm\ChurchCRM\Slim\Middleware\VersionMiddleware.php(13): Slim\App->__invoke(Object(Slim\Http\Request), Object(Slim\Http\Response))
+#13 [internal function]: ChurchCRM\Slim\Middleware\VersionMiddleware->__invoke(Object(Slim\Http\Request), Object(Slim\Http\Response), Object(Slim\App))
+#14 C:\xampp\htdocs\churchcrm\vendor\slim\slim\Slim\DeferredCallable.php(57): call_user_func_array(Object(ChurchCRM\Slim\Middleware\VersionMiddleware), Array)
+#15 [internal function]: Slim\DeferredCallable->__invoke(Object(Slim\Http\Request), Object(Slim\Http\Response), Object(Slim\App))
+#16 C:\xampp\htdocs\churchcrm\vendor\slim\slim\Slim\MiddlewareAwareTrait.php(70): call_user_func(Object(Slim\DeferredCallable), Object(Slim\Http\Request), Object(Slim\Http\Response), Object(Slim\App))
+#17 C:\xampp\htdocs\churchcrm\ChurchCRM\Slim\Middleware\AuthMiddleware.php(34): Slim\App->Slim\{closure}(Object(Slim\Http\Request), Object(Slim\Http\Response))
+#18 [internal function]: ChurchCRM\Slim\Middleware\AuthMiddleware->__invoke(Object(Slim\Http\Request), Object(Slim\Http\Response), Object(Closure))
+#19 C:\xampp\htdocs\churchcrm\vendor\slim\slim\Slim\DeferredCallable.php(57): call_user_func_array(Object(ChurchCRM\Slim\Middleware\AuthMiddleware), Array)
+#20 [internal function]: Slim\DeferredCallable->__invoke(Object(Slim\Http\Request), Object(Slim\Http\Response), Object(Closure))
+#21 C:\xampp\htdocs\churchcrm\vendor\slim\slim\Slim\MiddlewareAwareTrait.php(70): call_user_func(Object(Slim\DeferredCallable), Object(Slim\Http\Request), Object(Slim\Http\Response), Object(Closure))
+#22 C:\xampp\htdocs\churchcrm\vendor\slim\slim\Slim\MiddlewareAwareTrait.php(117): Slim\App->Slim\{closure}(Object(Slim\Http\Request), Object(Slim\Http\Response))
+#23 C:\xampp\htdocs\churchcrm\vendor\slim\slim\Slim\App.php(392): Slim\App->callMiddlewareStack(Object(Slim\Http\Request), Object(Slim\Http\Response))
+#24 C:\xampp\htdocs\churchcrm\vendor\slim\slim\Slim\App.php(297): Slim\App->process(Object(Slim\Http\Request), Object(Slim\Http\Response))
+#25 C:\xampp\htdocs\churchcrm\v2\index.php(48): Slim\App->run()
+#26 {main}
+View in rendered output by enabling the "displayErrorDetails" setting.
+
+[10-Feb-2021 23:53:28 UTC] Slim Application Error:
+Type: Error
+Message: Call to a member function find() on null
+File: C:\xampp\htdocs\churchcrm\Include\Header.php
+Line: 26
+Trace: #0 C:\xampp\htdocs\churchcrm\v2\templates\root\dashboard.php(9): getTranslation('Families')
+#1 C:\xampp\htdocs\churchcrm\vendor\slim\php-view\src\PhpRenderer.php(203): include('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\churchcrm\vendor\slim\php-view\src\PhpRenderer.php(184): Slim\Views\PhpRenderer->protectedIncludeScope('templates/root/...', Array)
+#3 C:\xampp\htdocs\churchcrm\vendor\slim\php-view\src\PhpRenderer.php(153): Slim\Views\PhpRenderer->fetchTemplate('dashboard.php', Array)
+#4 C:\xampp\htdocs\churchcrm\vendor\slim\php-view\src\PhpRenderer.php(54): Slim\Views\PhpRenderer->fetch('dashboard.php', Array, true)
+#5 C:\xampp\htdocs\churchcrm\v2\routes\root.php(60): Slim\Views\PhpRenderer->render(Object(Slim\Http\Response), 'dashboard.php', Array)
+#6 [internal function]: viewDashboard(Object(Slim\Http\Request), Object(Slim\Http\Response), Array)
+#7 C:\xampp\htdocs\churchcrm\vendor\slim\slim\Slim\Handlers\Strategies\RequestResponse.php(40): call_user_func('viewDashboard', Object(Slim\Http\Request), Object(Slim\Http\Response), Array)
+#8 C:\xampp\htdocs\churchcrm\vendor\slim\slim\Slim\Route.php(281): Slim\Handlers\Strategies\RequestResponse->__invoke('viewDashboard', Object(Slim\Http\Request), Object(Slim\Http\Response), Array)
+#9 C:\xampp\htdocs\churchcrm\vendor\slim\slim\Slim\MiddlewareAwareTrait.php(117): Slim\Route->__invoke(Object(Slim\Http\Request), Object(Slim\Http\Response))
+#10 C:\xampp\htdocs\churchcrm\vendor\slim\slim\Slim\Route.php(268): Slim\Route->callMiddlewareStack(Object(Slim\Http\Request), Object(Slim\Http\Response))
+#11 C:\xampp\htdocs\churchcrm\vendor\slim\slim\Slim\App.php(503): Slim\Route->run(Object(Slim\Http\Request), Object(Slim\Http\Response))
+#12 C:\xampp\htdocs\churchcrm\ChurchCRM\Slim\Middleware\VersionMiddleware.php(13): Slim\App->__invoke(Object(Slim\Http\Request), Object(Slim\Http\Response))
+#13 [internal function]: ChurchCRM\Slim\Middleware\VersionMiddleware->__invoke(Object(Slim\Http\Request), Object(Slim\Http\Response), Object(Slim\App))
+#14 C:\xampp\htdocs\churchcrm\vendor\slim\slim\Slim\DeferredCallable.php(57): call_user_func_array(Object(ChurchCRM\Slim\Middleware\VersionMiddleware), Array)
+#15 [internal function]: Slim\DeferredCallable->__invoke(Object(Slim\Http\Request), Object(Slim\Http\Response), Object(Slim\App))
+#16 C:\xampp\htdocs\churchcrm\vendor\slim\slim\Slim\MiddlewareAwareTrait.php(70): call_user_func(Object(Slim\DeferredCallable), Object(Slim\Http\Request), Object(Slim\Http\Response), Object(Slim\App))
+#17 C:\xampp\htdocs\churchcrm\ChurchCRM\Slim\Middleware\AuthMiddleware.php(34): Slim\App->Slim\{closure}(Object(Slim\Http\Request), Object(Slim\Http\Response))
+#18 [internal function]: ChurchCRM\Slim\Middleware\AuthMiddleware->__invoke(Object(Slim\Http\Request), Object(Slim\Http\Response), Object(Closure))
+#19 C:\xampp\htdocs\churchcrm\vendor\slim\slim\Slim\DeferredCallable.php(57): call_user_func_array(Object(ChurchCRM\Slim\Middleware\AuthMiddleware), Array)
+#20 [internal function]: Slim\DeferredCallable->__invoke(Object(Slim\Http\Request), Object(Slim\Http\Response), Object(Closure))
+#21 C:\xampp\htdocs\churchcrm\vendor\slim\slim\Slim\MiddlewareAwareTrait.php(70): call_user_func(Object(Slim\DeferredCallable), Object(Slim\Http\Request), Object(Slim\Http\Response), Object(Closure))
+#22 C:\xampp\htdocs\churchcrm\vendor\slim\slim\Slim\MiddlewareAwareTrait.php(117): Slim\App->Slim\{closure}(Object(Slim\Http\Request), Object(Slim\Http\Response))
+#23 C:\xampp\htdocs\churchcrm\vendor\slim\slim\Slim\App.php(392): Slim\App->callMiddlewareStack(Object(Slim\Http\Request), Object(Slim\Http\Response))
+#24 C:\xampp\htdocs\churchcrm\vendor\slim\slim\Slim\App.php(297): Slim\App->process(Object(Slim\Http\Request), Object(Slim\Http\Response))
+#25 C:\xampp\htdocs\churchcrm\v2\index.php(48): Slim\App->run()
+#26 {main}
+View in rendered output by enabling the "displayErrorDetails" setting.
+
+[10-Feb-2021 23:53:51 UTC] Slim Application Error:
+Type: Error
+Message: Call to a member function find() on null
+File: C:\xampp\htdocs\churchcrm\Include\Header.php
+Line: 26
+Trace: #0 C:\xampp\htdocs\churchcrm\v2\templates\root\dashboard.php(9): getTranslation('Families')
+#1 C:\xampp\htdocs\churchcrm\vendor\slim\php-view\src\PhpRenderer.php(203): include('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\churchcrm\vendor\slim\php-view\src\PhpRenderer.php(184): Slim\Views\PhpRenderer->protectedIncludeScope('templates/root/...', Array)
+#3 C:\xampp\htdocs\churchcrm\vendor\slim\php-view\src\PhpRenderer.php(153): Slim\Views\PhpRenderer->fetchTemplate('dashboard.php', Array)
+#4 C:\xampp\htdocs\churchcrm\vendor\slim\php-view\src\PhpRenderer.php(54): Slim\Views\PhpRenderer->fetch('dashboard.php', Array, true)
+#5 C:\xampp\htdocs\churchcrm\v2\routes\root.php(60): Slim\Views\PhpRenderer->render(Object(Slim\Http\Response), 'dashboard.php', Array)
+#6 [internal function]: viewDashboard(Object(Slim\Http\Request), Object(Slim\Http\Response), Array)
+#7 C:\xampp\htdocs\churchcrm\vendor\slim\slim\Slim\Handlers\Strategies\RequestResponse.php(40): call_user_func('viewDashboard', Object(Slim\Http\Request), Object(Slim\Http\Response), Array)
+#8 C:\xampp\htdocs\churchcrm\vendor\slim\slim\Slim\Route.php(281): Slim\Handlers\Strategies\RequestResponse->__invoke('viewDashboard', Object(Slim\Http\Request), Object(Slim\Http\Response), Array)
+#9 C:\xampp\htdocs\churchcrm\vendor\slim\slim\Slim\MiddlewareAwareTrait.php(117): Slim\Route->__invoke(Object(Slim\Http\Request), Object(Slim\Http\Response))
+#10 C:\xampp\htdocs\churchcrm\vendor\slim\slim\Slim\Route.php(268): Slim\Route->callMiddlewareStack(Object(Slim\Http\Request), Object(Slim\Http\Response))
+#11 C:\xampp\htdocs\churchcrm\vendor\slim\slim\Slim\App.php(503): Slim\Route->run(Object(Slim\Http\Request), Object(Slim\Http\Response))
+#12 C:\xampp\htdocs\churchcrm\ChurchCRM\Slim\Middleware\VersionMiddleware.php(13): Slim\App->__invoke(Object(Slim\Http\Request), Object(Slim\Http\Response))
+#13 [internal function]: ChurchCRM\Slim\Middleware\VersionMiddleware->__invoke(Object(Slim\Http\Request), Object(Slim\Http\Response), Object(Slim\App))
+#14 C:\xampp\htdocs\churchcrm\vendor\slim\slim\Slim\DeferredCallable.php(57): call_user_func_array(Object(ChurchCRM\Slim\Middleware\VersionMiddleware), Array)
+#15 [internal function]: Slim\DeferredCallable->__invoke(Object(Slim\Http\Request), Object(Slim\Http\Response), Object(Slim\App))
+#16 C:\xampp\htdocs\churchcrm\vendor\slim\slim\Slim\MiddlewareAwareTrait.php(70): call_user_func(Object(Slim\DeferredCallable), Object(Slim\Http\Request), Object(Slim\Http\Response), Object(Slim\App))
+#17 C:\xampp\htdocs\churchcrm\ChurchCRM\Slim\Middleware\AuthMiddleware.php(34): Slim\App->Slim\{closure}(Object(Slim\Http\Request), Object(Slim\Http\Response))
+#18 [internal function]: ChurchCRM\Slim\Middleware\AuthMiddleware->__invoke(Object(Slim\Http\Request), Object(Slim\Http\Response), Object(Closure))
+#19 C:\xampp\htdocs\churchcrm\vendor\slim\slim\Slim\DeferredCallable.php(57): call_user_func_array(Object(ChurchCRM\Slim\Middleware\AuthMiddleware), Array)
+#20 [internal function]: Slim\DeferredCallable->__invoke(Object(Slim\Http\Request), Object(Slim\Http\Response), Object(Closure))
+#21 C:\xampp\htdocs\churchcrm\vendor\slim\slim\Slim\MiddlewareAwareTrait.php(70): call_user_func(Object(Slim\DeferredCallable), Object(Slim\Http\Request), Object(Slim\Http\Response), Object(Closure))
+#22 C:\xampp\htdocs\churchcrm\vendor\slim\slim\Slim\MiddlewareAwareTrait.php(117): Slim\App->Slim\{closure}(Object(Slim\Http\Request), Object(Slim\Http\Response))
+#23 C:\xampp\htdocs\churchcrm\vendor\slim\slim\Slim\App.php(392): Slim\App->callMiddlewareStack(Object(Slim\Http\Request), Object(Slim\Http\Response))
+#24 C:\xampp\htdocs\churchcrm\vendor\slim\slim\Slim\App.php(297): Slim\App->process(Object(Slim\Http\Request), Object(Slim\Http\Response))
+#25 C:\xampp\htdocs\churchcrm\v2\index.php(48): Slim\App->run()
+#26 {main}
+View in rendered output by enabling the "displayErrorDetails" setting.
+

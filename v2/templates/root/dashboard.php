@@ -1,11 +1,13 @@
 <?php
 
+
+
 use ChurchCRM\dto\SystemURLs;
 
 //Set the page title
 include SystemURLs::getDocumentRoot() . '/Include/Header.php';
-?>
 
+?>
 
 <!-- Small boxes (Stat box) -->
 <div class="row">
@@ -17,14 +19,14 @@ include SystemURLs::getDocumentRoot() . '/Include/Header.php';
                     <?= $dashboardCounts["families"] ?>
                 </h3>
                 <p>
-                    <?= gettext('Families') ?>
+                    <?= getTranslation('Families');?>
                 </p>
             </div>
             <div class="icon">
                 <i class="fa fa-users"></i>
             </div>
             <a href="<?= SystemURLs::getRootPath() ?>/v2/family" class="small-box-footer">
-                <?= gettext('See all Families') ?> <i class="fa fa-arrow-circle-right"></i>
+                <?= getTranslation('See all Families') ?> <i class="fa fa-arrow-circle-right"></i>
             </a>
         </div>
     </div><!-- ./col -->
@@ -36,14 +38,14 @@ include SystemURLs::getDocumentRoot() . '/Include/Header.php';
                     <?= $dashboardCounts["People"] ?>
                 </h3>
                 <p>
-                    <?= gettext('People') ?>
+                    <?= getTranslation('People') ?>
                 </p>
             </div>
             <div class="icon">
                 <i class="fa fa-user"></i>
             </div>
             <a href="<?= SystemURLs::getRootPath() ?>/v2/people" class="small-box-footer">
-                <?= gettext('See All People') ?> <i class="fa fa-arrow-circle-right"></i>
+                <?= getTranslation('See All People') ?> <i class="fa fa-arrow-circle-right"></i>
             </a>
         </div>
     </div><!-- ./col -->
@@ -57,14 +59,14 @@ include SystemURLs::getDocumentRoot() . '/Include/Header.php';
                         <?= $dashboardCounts["SundaySchool"] ?>
                     </h3>
                     <p>
-                        <?= gettext('Sunday School Classes') ?>
+                        <?= getTranslation('Sunday School Classes') ?>
                     </p>
                 </div>
                 <div class="icon">
                     <i class="fa fa-child"></i>
                 </div>
                 <a href="<?= SystemURLs::getRootPath() ?>/sundayschool/SundaySchoolDashboard.php" class="small-box-footer">
-                    <?= gettext('More info') ?> <i class="fa fa-arrow-circle-right"></i>
+                    <?= getTranslation('More info') ?> <i class="fa fa-arrow-circle-right"></i>
                 </a>
             </div>
         </div><!-- ./col -->
@@ -78,14 +80,14 @@ include SystemURLs::getDocumentRoot() . '/Include/Header.php';
                     <?= $dashboardCounts["Groups"] ?>
                 </h3>
                 <p>
-                    <?= gettext('Groups') ?>
+                    <?= getTranslation('Groups') ?>
                 </p>
             </div>
             <div class="icon">
                 <i class="fa fa-gg"></i>
             </div>
             <a href="<?= SystemURLs::getRootPath() ?>/GroupList.php" class="small-box-footer">
-                <?= gettext('More info') ?>  <i class="fa fa-arrow-circle-right"></i>
+                <?= getTranslation('More info') ?>  <i class="fa fa-arrow-circle-right"></i>
             </a>
         </div>
     </div><!-- ./col -->
@@ -97,14 +99,14 @@ include SystemURLs::getDocumentRoot() . '/Include/Header.php';
                     <?= $dashboardCounts["events"] ?>
                 </h3>
                 <p>
-                    <?= gettext('Attendees Checked In') ?>
+                    <?= getTranslation('Attendees Checked In') ?>
                 </p>
             </div>
             <div class="icon">
                 <i class="fa fa-gg"></i>
             </div>
             <a href="<?= SystemURLs::getRootPath() ?>/ListEvents.php" class="small-box-footer">
-                <?= gettext('More info') ?>  <i class="fa fa-arrow-circle-right"></i>
+                <?= getTranslation('More info') ?>  <i class="fa fa-arrow-circle-right"></i>
             </a>
         </div>
     </div><!-- ./col -->
@@ -115,7 +117,7 @@ include SystemURLs::getDocumentRoot() . '/Include/Header.php';
         <div class="row">
             <div class="col-md-6">
                 <div class="box box-solid">
-                    <h3 class="box-header"><h4><?= gettext("Today's Birthdays") ?></h4></h3>
+                    <h3 class="box-header"><h4><?= getTranslation("Today's Birthdays") ?></h4></h3>
                     <div class="box-body">
                         <table class="table table-striped" width="100%" id="PersonBirthdayDashboardItem"></table>
                     </div>
@@ -123,7 +125,7 @@ include SystemURLs::getDocumentRoot() . '/Include/Header.php';
             </div>
             <div class="col-md-6">
                 <div class="box box-solid">
-                    <h3 class="box-header"><h4><?= gettext("Today's Wedding Anniversaries") ?></h4></h3>
+                    <h3 class="box-header"><h4><?= getTranslation("Today's Wedding Anniversaries",) ?></h4></h3>
                     <div class="box-body">
                         <table class="table table-striped" width="100%" id="FamiliesWithAnniversariesDashboardItem"></table>
                     </div>
@@ -143,7 +145,7 @@ if ($depositEnabled) { // If the user has Finance permissions, then let's displa
             <div class="box box-info">
                 <div class="box-header">
                     <i class="fa fa-money"></i>
-                    <h3 class="box-title"><?= gettext('Deposit Tracking') ?></h3>
+                    <h3 class="box-title"><?= getTranslation('Deposit Tracking') ?></h3>
                     <div class="box-tools pull-right">
                         <div id="deposit-graph" class="chart-legend"></div>
                     </div>
@@ -160,14 +162,14 @@ if ($depositEnabled) { // If the user has Finance permissions, then let's displa
 
 <div class="box">
     <div class="box-header with-border">
-        <h3 class="box-title"><?= gettext('People') ?></h3>
+        <h3 class="box-title"><?= getTranslation('People') ?></h3>
         <div class="pull-right">
             <div class="btn-group">
                 <a href="<?= SystemURLs::getRootPath() ?>/PersonEditor.php">
-                    <button type="button" class="btn btn-success"><?= gettext('Add New Person') ?></button>
+                    <button type="button" class="btn btn-success"><?= getTranslation('Add New Person') ?></button>
                 </a>
                 <a href="<?= SystemURLs::getRootPath() ?>/FamilyEditor.php"
-                <button type="button" class="btn btn-success"><?= gettext('Add New Family') ?></button>
+                <button type="button" class="btn btn-success"><?= getTranslation('Add New Family') ?></button>
                 </a>
             </div>
         </div>
@@ -178,10 +180,10 @@ if ($depositEnabled) { // If the user has Finance permissions, then let's displa
                 <!-- Custom Tabs -->
                 <div class="nav-tabs-custom">
                     <ul class="nav nav-tabs">
-                        <li class="active"><a href="#ppl-tab_1" data-toggle="tab"><?= gettext('Latest Families') ?></a></li>
-                        <li><a href="#ppl-tab_2" data-toggle="tab"><?= gettext('Updated Families') ?></a></li>
-                        <li><a href="#ppl-tab_3" data-toggle="tab"><?= gettext('Latest Persons') ?></a></li>
-                        <li><a href="#ppl-tab_4" data-toggle="tab"><?= gettext('Updated Persons') ?></a></li>
+                        <li class="active"><a href="#ppl-tab_1" data-toggle="tab"><?= getTranslation('Latest Families') ?></a></li>
+                        <li><a href="#ppl-tab_2" data-toggle="tab"><?= getTranslation('Updated Families') ?></a></li>
+                        <li><a href="#ppl-tab_3" data-toggle="tab"><?= getTranslation('Latest Persons') ?></a></li>
+                        <li><a href="#ppl-tab_4" data-toggle="tab"><?= getTranslation('Updated Persons') ?></a></li>
                     </ul>
                     <div class="tab-content">
                         <div class="tab-pane active" id="ppl-tab_1">

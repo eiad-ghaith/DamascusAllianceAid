@@ -3,3 +3,8 @@ Stack trace:
 #0 C:\xampp\htdocs\churchcrm\index.php(45): require()
 #1 {main}
   thrown in C:\xampp\htdocs\churchcrm\main.php on line 10
+[10-Feb-2021 22:34:01 UTC] PHP Fatal error:  Uncaught Error: Class 'Gettext\Loader\PoLoader' not found in C:\xampp\htdocs\churchcrm\main.php:10
+Stack trace:
+#0 C:\xampp\htdocs\churchcrm\index.php(45): require()
+#1 {main}
+  thrown in C:\xampp\htdocs\churchcrm\main.php on line 10
