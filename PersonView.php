@@ -139,6 +139,9 @@ $sFamilyInfoEnd = '</span>';
 // Assign the values locally, after selecting whether to display the family or person information
 
 //Get an unformatted mailing address to pass as a parameter to a google maps search
+
+$sNationalId = SelectWhichInfo($per_NationalId, "", true);
+
 SelectWhichAddress($Address1, $Address2, $per_Address1, $per_Address2, $fam_Address1, $fam_Address2, false);
 $sCity = SelectWhichInfo($per_City, $fam_City, false);
 $sState = SelectWhichInfo($per_State, $fam_State, false);
@@ -296,6 +299,11 @@ $bOkToEdit = (
             </span></li>
                         <?php
               }
+   // national Id Presentation
+        ?>
+            <li><i class="fa-li fa fa-id-card" aria-hidden="true"></i><?= gettext('National Id') ?>: <?= $sNationalId ?></li>
+            <?php
+
     if ($dBirthDate) {
         ?>
             <li>
@@ -337,7 +345,6 @@ $bOkToEdit = (
             <li><i class="fa-li fa fa-envelope"></i><?= gettext('Work/Other Email') ?>: <span><a href="mailto:<?= $per_WorkEmail ?>"><?= $per_WorkEmail ?></a></span></li>
               <?php
     }
-
     if ($per_FacebookID > 0) {
         ?>
               <li><i class="fa-li fa fa-facebook-official"></i><?= gettext('Facebook') ?>: <span><a href="https://www.facebook.com/<?= InputUtils::FilterInt($per_FacebookID) ?> "target="_blank"><?= gettext('Facebook') ?></a></span></li>

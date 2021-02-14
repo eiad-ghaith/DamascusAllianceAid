@@ -135,8 +135,10 @@ foreach ($ListItem as $element) {
                         }
                             ?>
                 <td><?= $person->getId() ?></td>
-                <td><?= $person->getLastName()?></td>
                 <td><?= $person->getFirstName()?></td>
+                <td><?= $person->getMiddleName()?></td>
+                <td><?= $person->getLastName()?></td>
+                <td><?= $person->getNationalId()?></td>
                 <td><?= $person->getAddress() ?></td>
                 <td><?= $person->getHomePhone() ?></td>
                 <td><?= $person->getCellPhone() ?></td>
@@ -180,17 +182,26 @@ foreach ($ListItem as $element) {
                 },
                 {
                     title:i18next.t('Id'),
-                    visible:false
                 },
-                {
-                    title:i18next.t('Last Name'),
-                },
+
                 {
                     title:i18next.t('First Name'),
                 },
+
+                {
+                    title:i18next.t('Father Name'),
+                },
+
+                {
+                    title:i18next.t('Last Name'),
+                },
+
+                {
+                    title:i18next.t('National Id'),
+                },
+
                 {
                     title:i18next.t('Address'),
-                    visible:bVisible
                 },
                 {
                     title:i18next.t('Home Phone'),

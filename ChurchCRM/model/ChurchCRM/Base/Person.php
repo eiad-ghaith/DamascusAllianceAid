@@ -114,6 +114,13 @@ abstract class Person implements ActiveRecordInterface
     protected $per_title;
 
     /**
+     * The value for the per_nationalid field.
+     *
+     * @var        string
+     */
+    protected $per_nationalid;
+
+    /**
      * The value for the per_firstname field.
      *
      * @var        string
@@ -744,6 +751,16 @@ abstract class Person implements ActiveRecordInterface
     }
 
     /**
+     * Get the [per_NationalId] column value.
+     *
+     * @return string
+     */
+    public function getNationalId()
+    {
+        return $this->per_nationalid;
+    }
+
+    /**
      * Get the [per_firstname] column value.
      *
      * @return string
@@ -1152,6 +1169,22 @@ abstract class Person implements ActiveRecordInterface
 
         return $this;
     } // setTitle()
+
+
+    public function setNationalId($v)
+    {
+        if ($v !== null) {
+            $v = (string) $v;
+        }
+
+        if ($this->per_nationalid !== $v) {
+            $this->per_nationalid = $v;
+            // $this->modifiedColumns[PersonTableMap::COL_PER_NATIONALID] = true;
+        }
+
+        return $this;
+    } // setNationalId()
+
 
     /**
      * Set the value of [per_firstname] column.
@@ -1903,7 +1936,8 @@ abstract class Person implements ActiveRecordInterface
 
             $col = $row[TableMap::TYPE_NUM == $indexType ? 4 + $startcol : PersonTableMap::translateFieldName('LastName', TableMap::TYPE_PHPNAME, $indexType)];
             $this->per_lastname = (null !== $col) ? (string) $col : null;
-
+           
+           
             $col = $row[TableMap::TYPE_NUM == $indexType ? 5 + $startcol : PersonTableMap::translateFieldName('Suffix', TableMap::TYPE_PHPNAME, $indexType)];
             $this->per_suffix = (null !== $col) ? (string) $col : null;
 
@@ -1950,6 +1984,7 @@ abstract class Person implements ActiveRecordInterface
             $this->per_birthyear = (null !== $col) ? (int) $col : null;
 
             $col = $row[TableMap::TYPE_NUM == $indexType ? 20 + $startcol : PersonTableMap::translateFieldName('MembershipDate', TableMap::TYPE_PHPNAME, $indexType)];
+           
             if ($col === '0000-00-00') {
                 $col = null;
             }
@@ -2002,10 +2037,13 @@ abstract class Person implements ActiveRecordInterface
 
             $col = $row[TableMap::TYPE_NUM == $indexType ? 33 + $startcol : PersonTableMap::translateFieldName('Twitter', TableMap::TYPE_PHPNAME, $indexType)];
             $this->per_twitter = (null !== $col) ? (string) $col : null;
+            
+            $col = $row[TableMap::TYPE_NUM == $indexType ? 34 + $startcol : PersonTableMap::translateFieldName('NationalId', TableMap::TYPE_PHPNAME, $indexType)];
+            $this->per_nationalid = (null !== $col) ? (string) $col : null;
 
-            $col = $row[TableMap::TYPE_NUM == $indexType ? 34 + $startcol : PersonTableMap::translateFieldName('LinkedIn', TableMap::TYPE_PHPNAME, $indexType)];
-            $this->per_linkedin = (null !== $col) ? (string) $col : null;
             $this->resetModified();
+
+
 
             $this->setNew(false);
 
@@ -2385,6 +2423,10 @@ abstract class Person implements ActiveRecordInterface
         if ($this->isColumnModified(PersonTableMap::COL_PER_TITLE)) {
             $modifiedColumns[':p' . $index++]  = 'per_Title';
         }
+
+        if ($this->isColumnModified(PersonTableMap::COL_PER_NATIONALID)) {
+            $modifiedColumns[':p' . $index++]  = 'per_NationalId';
+        }
         if ($this->isColumnModified(PersonTableMap::COL_PER_FIRSTNAME)) {
             $modifiedColumns[':p' . $index++]  = 'per_FirstName';
         }
@@ -2500,6 +2542,9 @@ abstract class Person implements ActiveRecordInterface
                         break;
                     case 'per_Title':
                         $stmt->bindValue($identifier, $this->per_title, PDO::PARAM_STR);
+                        break;
+                    case 'per_NationalId':
+                        $stmt->bindValue($identifier, $this->per_nationalid, PDO::PARAM_STR);
                         break;
                     case 'per_FirstName':
                         $stmt->bindValue($identifier, $this->per_firstname, PDO::PARAM_STR);
@@ -2765,7 +2810,7 @@ abstract class Person implements ActiveRecordInterface
                 return $this->getTwitter();
                 break;
             case 34:
-                return $this->getLinkedIn();
+                return $this->getNationalId();
                 break;
             default:
                 return null;
@@ -2831,7 +2876,7 @@ abstract class Person implements ActiveRecordInterface
             $keys[31] => $this->getFlags(),
             $keys[32] => $this->getFacebookID(),
             $keys[33] => $this->getTwitter(),
-            $keys[34] => $this->getLinkedIn(),
+            $keys[34] => $this->getNationalId(),
         );
         if ($result[$keys[20]] instanceof \DateTimeInterface) {
             $result[$keys[20]] = $result[$keys[20]]->format('c');
@@ -3142,7 +3187,7 @@ abstract class Person implements ActiveRecordInterface
                 $this->setTwitter($value);
                 break;
             case 34:
-                $this->setLinkedIn($value);
+                $this->setNationalId($value);
                 break;
         } // switch()
 
@@ -3273,7 +3318,7 @@ abstract class Person implements ActiveRecordInterface
             $this->setTwitter($arr[$keys[33]]);
         }
         if (array_key_exists($keys[34], $arr)) {
-            $this->setLinkedIn($arr[$keys[34]]);
+            $this->setNationalId($arr[$keys[34]]);
         }
     }
 
@@ -3321,6 +3366,9 @@ abstract class Person implements ActiveRecordInterface
         }
         if ($this->isColumnModified(PersonTableMap::COL_PER_TITLE)) {
             $criteria->add(PersonTableMap::COL_PER_TITLE, $this->per_title);
+        }
+        if ($this->isColumnModified(PersonTableMap::COL_PER_NATIONALID)) {
+            $criteria->add(PersonTableMap::COL_PER_NATIONALID, $this->per_nationalid);
         }
         if ($this->isColumnModified(PersonTableMap::COL_PER_FIRSTNAME)) {
             $criteria->add(PersonTableMap::COL_PER_FIRSTNAME, $this->per_firstname);
@@ -5696,6 +5744,7 @@ abstract class Person implements ActiveRecordInterface
         }
         $this->per_id = null;
         $this->per_title = null;
+        $this->per_nationalid = null;
         $this->per_firstname = null;
         $this->per_middlename = null;
         $this->per_lastname = null;

@@ -3,3 +3,33 @@ Stack trace:
 #0 C:\xampp\htdocs\churchcrm\PersonEditor.php(396): RunQuery('INSERT INTO per...')
 #1 {main}
   thrown in C:\xampp\htdocs\churchcrm\Include\Functions.php on line 215
+[14-Feb-2021 23:49:25 Europe/Berlin] PHP Fatal error:  Uncaught Error: Undefined class constant 'ChurchCRM\Map\PersonTableMap::COL_PER_NationalId' in C:\xampp\htdocs\churchcrm\ChurchCRM\model\ChurchCRM\Map\PersonTableMap.php:659
+Stack trace:
+#0 C:\xampp\htdocs\churchcrm\ChurchCRM\model\ChurchCRM\Map\PersonTableMap.php(754): ChurchCRM\Map\PersonTableMap::buildTableMap()
+#1 C:\xampp\htdocs\churchcrm\vendor\composer\ClassLoader.php(476): include('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\churchcrm\vendor\composer\ClassLoader.php(344): Composer\Autoload\includeFile('C:\\xampp\\htdocs...')
+#3 [internal function]: Composer\Autoload\ClassLoader->loadClass('ChurchCRM\\Map\\P...')
+#4 [internal function]: spl_autoload_call('ChurchCRM\\Map\\P...')
+#5 C:\xampp\htdocs\churchcrm\vendor\propel\propel\src\Propel\Runtime\Map\DatabaseMap.php(202): class_exists('\\ChurchCRM\\Map\\...')
+#6 C:\xampp\htdocs\churchcrm\vendor\propel\propel\src\Propel\Runtime\ActiveQuery\BaseModelCriteria.php(176): Propel\Runtime\Map\DatabaseMap->getTableByPhpName('\\ChurchCRM\\Pers...')
+#7 C:\xampp\htdo in C:\xampp\htdocs\churchcrm\ChurchCRM\model\ChurchCRM\Map\PersonTableMap.php on line 659
+[14-Feb-2021 23:49:37 Europe/Berlin] PHP Fatal error:  Uncaught Error: Undefined class constant 'ChurchCRM\Map\PersonTableMap::COL_PER_NationalId' in C:\xampp\htdocs\churchcrm\ChurchCRM\model\ChurchCRM\Map\PersonTableMap.php:659
+Stack trace:
+#0 C:\xampp\htdocs\churchcrm\ChurchCRM\model\ChurchCRM\Map\PersonTableMap.php(754): ChurchCRM\Map\PersonTableMap::buildTableMap()
+#1 C:\xampp\htdocs\churchcrm\vendor\composer\ClassLoader.php(476): include('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\churchcrm\vendor\composer\ClassLoader.php(344): Composer\Autoload\includeFile('C:\\xampp\\htdocs...')
+#3 [internal function]: Composer\Autoload\ClassLoader->loadClass('ChurchCRM\\Map\\P...')
+#4 [internal function]: spl_autoload_call('ChurchCRM\\Map\\P...')
+#5 C:\xampp\htdocs\churchcrm\vendor\propel\propel\src\Propel\Runtime\Map\DatabaseMap.php(202): class_exists('\\ChurchCRM\\Map\\...')
+#6 C:\xampp\htdocs\churchcrm\vendor\propel\propel\src\Propel\Runtime\ActiveQuery\BaseModelCriteria.php(176): Propel\Runtime\Map\DatabaseMap->getTableByPhpName('\\ChurchCRM\\Pers...')
+#7 C:\xampp\htdo in C:\xampp\htdocs\churchcrm\ChurchCRM\model\ChurchCRM\Map\PersonTableMap.php on line 659
+[14-Feb-2021 23:49:53 Europe/Berlin] PHP Fatal error:  Uncaught Error: Undefined class constant 'ChurchCRM\Map\PersonTableMap::COL_PER_NATIONALID' in C:\xampp\htdocs\churchcrm\ChurchCRM\model\ChurchCRM\Map\PersonTableMap.php:659
+Stack trace:
+#0 C:\xampp\htdocs\churchcrm\ChurchCRM\model\ChurchCRM\Map\PersonTableMap.php(754): ChurchCRM\Map\PersonTableMap::buildTableMap()
+#1 C:\xampp\htdocs\churchcrm\vendor\composer\ClassLoader.php(476): include('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\churchcrm\vendor\composer\ClassLoader.php(344): Composer\Autoload\includeFile('C:\\xampp\\htdocs...')
+#3 [internal function]: Composer\Autoload\ClassLoader->loadClass('ChurchCRM\\Map\\P...')
+#4 [internal function]: spl_autoload_call('ChurchCRM\\Map\\P...')
+#5 C:\xampp\htdocs\churchcrm\vendor\propel\propel\src\Propel\Runtime\Map\DatabaseMap.php(202): class_exists('\\ChurchCRM\\Map\\...')
+#6 C:\xampp\htdocs\churchcrm\vendor\propel\propel\src\Propel\Runtime\ActiveQuery\BaseModelCriteria.php(176): Propel\Runtime\Map\DatabaseMap->getTableByPhpName('\\ChurchCRM\\Pers...')
+#7 C:\xampp\htdo in C:\xampp\htdocs\churchcrm\ChurchCRM\model\ChurchCRM\Map\PersonTableMap.php on line 659
