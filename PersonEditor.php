@@ -79,6 +79,7 @@ $numCustomFields = mysqli_num_rows($rsCustomFields);
 
 //Initialize the error flag
 $bErrorFlag = false;
+$sNationalIdError = '';
 $sFirstNameError = '';
 $sMiddleNameError = '';
 $sLastNameError = '';
@@ -102,7 +103,7 @@ $sLinkedInError = false;
 //Is this the second pass?
 if (isset($_POST['PersonSubmit']) || isset($_POST['PersonSubmitAndAdd'])) {
     //Get all the variables from the request object and assign them locally
-    $sTitle = InputUtils::LegacyFilterInput($_POST['Title']);
+    $sNationalId = InputUtils::LegacyFilterInput($_POST['NationalId']);
     $sFirstName = InputUtils::LegacyFilterInput($_POST['FirstName']);
     $sMiddleName = InputUtils::LegacyFilterInput($_POST['MiddleName']);
     $sLastName = InputUtils::LegacyFilterInput($_POST['LastName']);
@@ -191,6 +192,16 @@ if (isset($_POST['PersonSubmit']) || isset($_POST['PersonSubmitAndAdd'])) {
     //Adjust variables as needed
     if ($iFamily == 0) {
         $iFamilyRole = 0;
+    }
+
+
+    // validate the national ID
+    if (strlen($sNationalId) > 0) {
+        if (strlen($sNationalId) < 11) {
+            $sNationalIdError = '<span style="color: red; ">'
+                .gettext('National Id is Not Valid').'</span>';
+            $bErrorFlag = true;
+        }
     }
 
     //Validate the Last Name.  If family selected, but no last name, inherit from family.
@@ -326,8 +337,8 @@ if (isset($_POST['PersonSubmit']) || isset($_POST['PersonSubmitAndAdd'])) {
         if ($iPersonID < 1) {
             $iEnvelope = 0;
 
-            $sSQL = "INSERT INTO person_per (per_Title, per_FirstName, per_MiddleName, per_LastName, per_Suffix, per_Gender, per_Address1, per_Address2, per_City, per_State, per_Zip, per_Country, per_HomePhone, per_WorkPhone, per_CellPhone, per_Email, per_WorkEmail, per_BirthMonth, per_BirthDay, per_BirthYear, per_Envelope, per_fam_ID, per_fmr_ID, per_MembershipDate, per_cls_ID, per_DateEntered, per_EnteredBy, per_FriendDate, per_Flags, per_FacebookID, per_Twitter, per_LinkedIn)
-			         VALUES ('".$sTitle."','".$sFirstName."','".$sMiddleName."','".$sLastName."','".$sSuffix."',".$iGender.",'".$sAddress1."','".$sAddress2."','".$sCity."','".$sState."','".$sZip."','".$sCountry."','".$sHomePhone."','".$sWorkPhone."','".$sCellPhone."','".$sEmail."','".$sWorkEmail."',".$iBirthMonth.','.$iBirthDay.','.$iBirthYear.','.$iEnvelope.','.$iFamily.','.$iFamilyRole.',';
+            $sSQL = "INSERT INTO person_per (per_NationalId, per_FirstName, per_MiddleName, per_LastName, per_Suffix, per_Gender, per_Address1, per_Address2, per_City, per_State, per_Zip, per_Country, per_HomePhone, per_WorkPhone, per_CellPhone, per_Email, per_WorkEmail, per_BirthMonth, per_BirthDay, per_BirthYear, per_Envelope, per_fam_ID, per_fmr_ID, per_MembershipDate, per_cls_ID, per_DateEntered, per_EnteredBy, per_FriendDate, per_Flags, per_FacebookID, per_Twitter, per_LinkedIn)
+			         VALUES ('".$sNationalId."','".$sFirstName."','".$sMiddleName."','".$sLastName."','".$sSuffix."',".$iGender.",'".$sAddress1."','".$sAddress2."','".$sCity."','".$sState."','".$sZip."','".$sCountry."','".$sHomePhone."','".$sWorkPhone."','".$sCellPhone."','".$sEmail."','".$sWorkEmail."',".$iBirthMonth.','.$iBirthDay.','.$iBirthYear.','.$iEnvelope.','.$iFamily.','.$iFamilyRole.',';
             if (strlen($dMembershipDate) > 0) {
                 $sSQL .= '"'.$dMembershipDate.'"';
             } else {
@@ -351,7 +362,7 @@ if (isset($_POST['PersonSubmit']) || isset($_POST['PersonSubmitAndAdd'])) {
 
         // Existing person (update)
         } else {
-            $sSQL = "UPDATE person_per SET per_Title = '".$sTitle."',per_FirstName = '".$sFirstName."',per_MiddleName = '".$sMiddleName."', per_LastName = '".$sLastName."', per_Suffix = '".$sSuffix."', per_Gender = ".$iGender.", per_Address1 = '".$sAddress1."', per_Address2 = '".$sAddress2."', per_City = '".$sCity."', per_State = '".$sState."', per_Zip = '".$sZip."', per_Country = '".$sCountry."', per_HomePhone = '".$sHomePhone."', per_WorkPhone = '".$sWorkPhone."', per_CellPhone = '".$sCellPhone."', per_Email = '".$sEmail."', per_WorkEmail = '".$sWorkEmail."', per_BirthMonth = ".$iBirthMonth.', per_BirthDay = '.$iBirthDay.', '.'per_BirthYear = '.$iBirthYear.', per_fam_ID = '.$iFamily.', per_Fmr_ID = '.$iFamilyRole.', per_cls_ID = '.$iClassification.', per_MembershipDate = ';
+            $sSQL = "UPDATE person_per SET per_NationalId = '".$sNationalId."',per_FirstName = '".$sFirstName."',per_MiddleName = '".$sMiddleName."', per_LastName = '".$sLastName."', per_Suffix = '".$sSuffix."', per_Gender = ".$iGender.", per_Address1 = '".$sAddress1."', per_Address2 = '".$sAddress2."', per_City = '".$sCity."', per_State = '".$sState."', per_Zip = '".$sZip."', per_Country = '".$sCountry."', per_HomePhone = '".$sHomePhone."', per_WorkPhone = '".$sWorkPhone."', per_CellPhone = '".$sCellPhone."', per_Email = '".$sEmail."', per_WorkEmail = '".$sWorkEmail."', per_BirthMonth = ".$iBirthMonth.', per_BirthDay = '.$iBirthDay.', '.'per_BirthYear = '.$iBirthYear.', per_fam_ID = '.$iFamily.', per_Fmr_ID = '.$iFamilyRole.', per_cls_ID = '.$iClassification.', per_MembershipDate = ';
             if (strlen($dMembershipDate) > 0) {
                 $sSQL .= '"'.$dMembershipDate.'"';
             } else {
@@ -463,7 +474,7 @@ if (isset($_POST['PersonSubmit']) || isset($_POST['PersonSubmitAndAdd'])) {
         $rsPerson = RunQuery($sSQL);
         extract(mysqli_fetch_array($rsPerson));
 
-        $sTitle = $per_Title;
+        $sNationalId = $per_NationalId;
         $sFirstName = $per_FirstName;
         $sMiddleName = $per_MiddleName;
         $sLastName = $per_LastName;
@@ -528,7 +539,7 @@ if (isset($_POST['PersonSubmit']) || isset($_POST['PersonSubmitAndAdd'])) {
     } else {
         //Adding....
         //Set defaults
-        $sTitle = '';
+        $sNationalId = '';
         $sFirstName = '';
         $sMiddleName = '';
         $sLastName = '';
@@ -639,10 +650,14 @@ require 'Include/Header.php';
                         </select>
                     </div>
                     <div class="col-md-3">
-                        <label for="Title"><?= gettext('Title') ?>:</label>
-                        <input type="text" name="Title" id="Title"
-                               value="<?= htmlentities(stripslashes($sTitle), ENT_NOQUOTES, 'UTF-8') ?>"
-                               class="form-control" placeholder="<?= gettext('Mr., Mrs., Dr., Rev.') ?>">
+                        <label for="NationalId"><?= gettext('National ID') ?>:</label>
+                        <input type="text" name="NationalId" id="NationalId"
+                               value="<?= htmlentities(stripslashes($sNationalId), ENT_NOQUOTES, 'UTF-8') ?>"
+                               class="form-control">
+                               <?php if ($sNationalId) {
+        ?><br><font
+                            color="red"><?php echo $sNationalIdError ?></font><?php
+    } ?>
                     </div>
                 </div>
                 <p/>
@@ -659,7 +674,7 @@ require 'Include/Header.php';
                     </div>
 
                     <div class="col-md-2">
-                        <label for="MiddleName"><?= gettext('Middle Name') ?>:</label>
+                        <label for="MiddleName"><?= gettext('Father Name') ?>:</label>
                         <input type="text" name="MiddleName" id="MiddleName"
                                value="<?= htmlentities(stripslashes($sMiddleName), ENT_NOQUOTES, 'UTF-8') ?>"
                                class="form-control">
