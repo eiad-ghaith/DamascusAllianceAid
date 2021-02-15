@@ -4,6 +4,15 @@
 use ChurchCRM\dto\SystemConfig;
 use ChurchCRM\dto\SystemURLs;
 
+use ChurchCRM\Authentication\AuthenticationManager;
+use ChurchCRM\dto\Classification;
+use ChurchCRM\Service\MailChimpService;
+
+use ChurchCRM\dto\PeopleCustomField;
+use ChurchCRM\FamilyCustomMasterQuery;
+use ChurchCRM\FamilyCustomQuery;
+
+
 //Set the page title
 $sPageTitle = gettext(ucfirst($sMode)) . ' ' . gettext('Family List');
 include SystemURLs::getDocumentRoot() . '/Include/Header.php';
@@ -30,12 +39,14 @@ include SystemURLs::getDocumentRoot() . '/Include/Header.php';
                 <th><?= gettext('Created') ?></th>
                 <th><?= gettext('Edited') ?></th>
                 <th><?= gettext('chose') ?></th>
+                <th><?= gettext('Address Additional Info') ?></th>
             </tr>
             </thead>
             <tbody>
 
             <!--Populate the table with family details -->
-            <?php foreach ($families as $family) {
+            <?php 
+            foreach ($families as $family) {
               /* @var $family ChurchCRM\Family */
     ?>
             <tr>
@@ -51,16 +62,44 @@ include SystemURLs::getDocumentRoot() . '/Include/Header.php';
                             <i class="fa fa-pencil fa-stack-1x fa-inverse"></i>
                         </span>
                     </a></td>
-              <td><?= $family->getName() ?></td>
+                <td> <?= $family->getName() ?></td>
                 <td> <?= $family->getAddress() ?></td>
-                <td><?= $family->getHomePhone() ?></td>
-                <td><?= $family->getCellPhone() ?></td>
-                <td><?= $family->getEmail() ?></td>
-                <td><?= date_format($family->getDateEntered(), SystemConfig::getValue('sDateFormatLong')) ?></td>
-                <td><?= date_format($family->getDateLastEdited(), SystemConfig::getValue('sDateFormatLong')) ?></td>
-                <td><?= $family->getFamilyCustom() ?></td>                
+                <td> <?= $family->getHomePhone() ?></td>
+                <td> <?= $family->getCellPhone() ?></td>
+                <td> <?= $family->getEmail() ?></td>
+                <td> <?= date_format($family->getDateEntered(), SystemConfig::getValue('sDateFormatLong')) ?></td>
+                <td> <?= date_format($family->getDateLastEdited(), SystemConfig::getValue('sDateFormatLong')) ?></td>
+               
                 <?php
-                 
+                    $allFamilyCustomFields = FamilyCustomMasterQuery::create()->find();
+
+                  $rawQry =  FamilyCustomQuery::create();
+                  foreach ($allFamilyCustomFields as $customfield ) {
+                    $rawQry->withColumn($customfield->getField());
+                }
+
+                $thisFamilyCustomFields = $rawQry->findOneByFamId($family->getId());
+                if ($thisFamilyCustomFields) {
+                  $familyCustom = [];
+ 
+                  foreach ($allFamilyCustomFields as $customfield ) {
+
+                        $value = $thisFamilyCustomFields->getVirtualColumn($customfield->getField());
+            
+                        if (!empty($value)) {
+
+                            $item = new PeopleCustomField($customfield, $value);
+                            ?>
+                            <td> <?= $item->getFormattedValue() ?></td>
+                            <?php
+                          }
+                  }
+              }
+
+            ?>
+
+                <?php
+               
 }
                 ?>
             </tr>
