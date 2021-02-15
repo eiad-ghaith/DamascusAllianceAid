@@ -29,6 +29,7 @@ include SystemURLs::getDocumentRoot() . '/Include/Header.php';
                 <th><?= gettext('Email') ?></th>
                 <th><?= gettext('Created') ?></th>
                 <th><?= gettext('Edited') ?></th>
+                <th><?= gettext('chose') ?></th>
             </tr>
             </thead>
             <tbody>
@@ -57,7 +58,9 @@ include SystemURLs::getDocumentRoot() . '/Include/Header.php';
                 <td><?= $family->getEmail() ?></td>
                 <td><?= date_format($family->getDateEntered(), SystemConfig::getValue('sDateFormatLong')) ?></td>
                 <td><?= date_format($family->getDateLastEdited(), SystemConfig::getValue('sDateFormatLong')) ?></td>
+                <td><?= $family->getFamilyCustom() ?></td>                
                 <?php
+                 
 }
                 ?>
             </tr>

@@ -194,6 +194,7 @@ $mailchimp = new MailChimpService();
                                  <span id="<?= md5($family->getEmail())?>">... <?= gettext("loading")?> ...</span></a></li>
                                 <?php }
                             }
+                            
                             foreach ($familyCustom as $customField) {
                                 echo '<li><i class="fa-li ' . $customField->getIcon() . '"></i>'. $customField->getDisplayValue().': <span>';
                                 if ($customField->getLink()) {
@@ -202,7 +203,8 @@ $mailchimp = new MailChimpService();
                                     echo $customField->getFormattedValue();
                                 }
                                 echo '</span></li>';
-                            }  ?>
+                            }  
+                            ?>
                         </ul>
                     </div>
                 </div>
