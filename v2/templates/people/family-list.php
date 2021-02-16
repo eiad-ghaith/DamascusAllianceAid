@@ -69,7 +69,12 @@ include SystemURLs::getDocumentRoot() . '/Include/Header.php';
                 <td> <?= $family->getEmail() ?></td>
                 <td> <?= date_format($family->getDateEntered(), SystemConfig::getValue('sDateFormatLong')) ?></td>
                 <td> <?= date_format($family->getDateLastEdited(), SystemConfig::getValue('sDateFormatLong')) ?></td>
-               
+               <!-- todo: Select custom list options from an array -->
+               <!-- todo: Select custom list for Address Additional Info -->
+               <!-- todo: Select custom list for Additional Info -->
+               <!-- todo: Select custom list for Team Info -->
+               <!-- todo: Select custom list for Ref -->
+               <!-- todo: Select custom list for Membership Status -->
                 <?php
                     $allFamilyCustomFields = FamilyCustomMasterQuery::create()->find();
 

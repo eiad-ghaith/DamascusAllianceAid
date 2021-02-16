@@ -143,14 +143,16 @@ $mailchimp = new MailChimpService();
                     <div class="box-body">
                         <ul class="fa-ul">
 
-                            <?php
-                            if (!SystemConfig::getBooleanValue("bHideFamilyNewsletter")) { /* Newsletter can be hidden - General Settings */ ?>
-                                <li><i class="fa-li fa fa-hacker-news"></i><?= gettext("Send Newsletter") ?>:
+                            <?php 
+                            if (!SystemConfig::getBooleanValue("bHideFamilyNewsletter")) { /* Newsletter can be hidden - General Settings */
+                             ?>
+                            <li><i class="fa-li fa fa-hacker-news"></i><?= gettext("Send Newsletter") ?>:
                                     <span style="color:<?= ($fam_SendNewsLetter == "TRUE" ? "green" : "red") ?>"><i
                                             class="fa fa-<?= (!$family->getSendNewsletter() ? "check" : "times") ?>"></i></span>
-                                </li>
+                                </li> 
                                 <?php
                             }
+
                             if (!SystemConfig::getBooleanValue("bHideWeddingDate") && !empty($family->getWeddingdate())) { /* Wedding Date can be hidden - General Settings */ ?>
                                 <li><i class="fa-li fa fa-magic"></i><?= gettext("Wedding Date") ?>:
                                     <span><?= $family->getWeddingDate()->format(SystemConfig::getValue("sDateFormatLong")) ?></span></li>
@@ -163,6 +165,7 @@ $mailchimp = new MailChimpService();
                                 </li>
                                 <?php
                             }
+                            
                             if (!empty($family->getHomePhone())) {
                                 ?>
                                 <li><i class="fa-li fa fa-phone"></i><?= gettext("Home Phone") ?>: <span><a
