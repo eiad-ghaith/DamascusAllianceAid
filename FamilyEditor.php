@@ -674,25 +674,6 @@ require 'Include/Header.php';
 				</div>
 				<p/>
 				<div class="row">
-					<div id="stateOptionDiv" class="form-group col-md-3">
-						<label for="StatleTextBox"><?= gettext('State')?>: </label>
-                        <select id="State" name="State" class="form-control select2" id="state-input" data-user-selected="<?= $sState ?>" data-system-default="<?= SystemConfig::getValue('sDefaultState')?>">
-                        </select>
-                    </div>
-					<div id="stateInputDiv" class="form-group col-md-3 hidden">
-						<label><?= gettext('State') ?>:</label>
-						<input id="StateTextbox" type="text"  class="form-control" name="StateTextbox" value="<?= htmlentities(stripslashes($sState), ENT_NOQUOTES, 'UTF-8') ?>" size="20" maxlength="30">
-					</div>
-					<div class="form-group col-md-3">
-						<label><?= gettext('Zip')?>:</label>
-						<input type="text" Name="Zip"  class="form-control" <?php
-                            // bevand10 2012-04-26 Add support for uppercase ZIP - controlled by administrator via cfg param
-                            if (SystemConfig::getBooleanValue('bForceUppercaseZip')) {
-                                echo 'style="text-transform:uppercase" ';
-                            }
-                            echo 'value="'.htmlentities(stripslashes($sZip), ENT_NOQUOTES, 'UTF-8').'" '; ?>
-							maxlength="10" size="8">
-					</div>
 					<div class="form-group col-md-3">
 						<label> <?= gettext('Country') ?>:</label>
                         <select id="Country" name="Country" class="form-control select2" id="country-input" data-user-selected="<?= $sCountry ?>" data-system-default="<?= SystemConfig::getValue('sDefaultCountry')?>">
@@ -701,16 +682,7 @@ require 'Include/Header.php';
 				</div>
 				<?php if (!SystemConfig::getValue('bHideLatLon')) { /* Lat/Lon can be hidden - General Settings */
                                 if (!$bHaveXML) { // No point entering if values will just be overwritten?>
-				<div class="row">
-					<div class="form-group col-md-3">
-						<label><?= gettext('Latitude') ?>:</label>
-						<input type="text" class="form-control" Name="Latitude" value="<?= $nLatitude ?>" size="30" maxlength="50">
-					</div>
-					<div class="form-group col-md-3">
-						<label><?= gettext('Longitude') ?>:</label>
-						<input type="text" class="form-control" Name="Longitude" value="<?= $nLongitude ?>" size="30" maxlength="50">
-					</div>
-				</div>
+				
 				<?php
                                 }
                             } /* Lat/Lon can be hidden - General Settings */ ?>
@@ -769,15 +741,7 @@ require 'Include/Header.php';
 						<input type="text" Name="Email" class="form-control" value="<?= htmlentities(stripslashes($sEmail)) ?>" size="30" maxlength="100"><font color="red"><?php echo '<BR>'.$sEmailError ?></font>
 					</div>
 				</div>
-				<?php if (!SystemConfig::getValue('bHideFamilyNewsletter')) { /* Newsletter can be hidden - General Settings */ ?>
-				<div class="form-group col-md-4">
-					<label><?= gettext('Send Newsletter') ?>:</label><br/>
-					<input type="checkbox" Name="SendNewsLetter" value="1" <?php if ($bSendNewsLetter) {
-                                echo ' checked';
-                            } ?>>
-				</div>
-				<?php
-                            } ?>
+	
 			</div>
 		</div>
 	</div>
@@ -805,7 +769,8 @@ require 'Include/Header.php';
 			<?php
                             } /* Wedding date can be hidden - General Settings */ ?>
 			<div class="row">
-				<?php if (AuthenticationManager::GetCurrentUser()->isCanvasserEnabled()) { // Only show this field if the current user is a canvasser?>
+				<?php if (AuthenticationManager::GetCurrentUser()->isCanvasserEnabled()) {
+                     // Only show this field if the current user is a canvasser?>
 					<div class="form-group col-md-4">
 						<label><?= gettext('Ok To Canvass') ?>: </label><br/>
 						<input type="checkbox" Name="OkToCanvass" value="1" <?php if ($bOkToCanvass) {

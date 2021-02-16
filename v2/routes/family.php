@@ -41,11 +41,15 @@ function listFamilies(Request $request, Response $response, array $args)
               ->orderByName()
               ->find();
   }
+
   $pageArgs = [
       'sMode' => $sMode,
       'sRootPath' => SystemURLs::getRootPath(),
-      'families' => $families
+      'families' => $families,
+    //  todo: get family attributes from admin panel 
+      'familyAttributes' => ['Actions','Name','Address','Home Phone', 'Cell Phone', 'Address Additional Info', 'Additional Info', 'Team Info', 'Ref', 'Membership Status']     
   ];
+
   return $renderer->render($response, 'family-list.php', $pageArgs);
 }
 

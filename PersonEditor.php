@@ -649,6 +649,7 @@ require 'Include/Header.php';
     } ?>><?= gettext('Female') ?></option>
                         </select>
                     </div>
+                    <!-- Edited: Title replaced with National ID -->
                     <div class="col-md-3">
                         <label for="NationalId"><?= gettext('National ID') ?>:</label>
                         <input type="text" name="NationalId" id="NationalId"
@@ -694,13 +695,8 @@ require 'Include/Header.php';
                             color="red"><?php echo $sLastNameError ?></font><?php
     } ?>
                     </div>
+                    <!-- Deleted: Suffix -->
 
-                    <div class="col-md-1">
-                        <label for="Suffix"><?= gettext('Suffix') ?>:</label>
-                        <input type="text" name="Suffix" id="Suffix"
-                               value="<?= htmlentities(stripslashes($sSuffix), ENT_NOQUOTES, 'UTF-8') ?>"
-                               placeholder="<?= gettext('Jr., Sr., III') ?>" class="form-control">
-                    </div>
                 </div>
                 <p/>
                 <div class="row">
@@ -778,12 +774,7 @@ require 'Include/Header.php';
                             color="red"><?php echo $sBirthDateError ?></font><?php
     } ?>
                     </div>
-                    <div class="col-md-2">
-                        <label><?= gettext('Hide Age') ?></label><br/>
-                        <input type="checkbox" name="HideAge" value="1" <?php if ($bHideAge) {
-        echo ' checked';
-    } ?> />
-                    </div>
+                <!-- Deleted: Hide Age -->
                 </div>
             </div>
         </div>
@@ -1070,76 +1061,10 @@ require 'Include/Header.php';
                         } ?>
                     </div>
                 </div>
-                <div class="form-group col-md-4">
-                    <label for="WorkEmail"><?= gettext('Work / Other Email') ?>:</label>
-                    <div class="input-group">
-                        <div class="input-group-addon">
-                            <i class="fa fa-envelope"></i>
-                        </div>
-                        <input type="text" name="WorkEmail"
-                               value="<?= htmlentities(stripslashes($sWorkEmail), ENT_NOQUOTES, 'UTF-8') ?>" size="30"
-                               maxlength="100" class="form-control">
-                        <?php if ($sWorkEmailError) {
-                            ?><font
-                            color="red"><?php echo $sWorkEmailError ?></font></td><?php
-                        } ?>
-                    </div>
-                </div>
+                <!-- Deleted: Work/ other email -->
             </div>
-            <div class="row">
-                <div class="form-group col-md-4">
-                    <label for="FacebookID">
-                        <?php
-                        if ($bFacebookID) {
-                            echo '<span style="color: red;">'.gettext('Facebook').':</span></td>';
-                        } else {
-                            echo gettext('Facebook').':</td>';
-                        }
-                        ?>
-                    </label>
-                    <div class="input-group">
-                        <div class="input-group-addon">
-                            <i class="fa fa-facebook"></i>
-                        </div>
-                        <input type="text" name="Facebook"
-                               value="<?= htmlentities(stripslashes($iFacebookID), ENT_NOQUOTES, 'UTF-8') ?>" size="30"
-                               maxlength="100" class="form-control">
-                        <?php if ($sFacebookError) {
-                            ?><font color="red"><?php echo $sFacebookError ?></font><?php
-                        } ?>
-                    </div>
-                </div>
-                <div class="form-group col-md-4">
-                    <label for="Twitter"><?= gettext('Twitter') ?>:</label>
-                    <div class="input-group">
-                        <div class="input-group-addon">
-                            <i class="fa fa-twitter"></i>
-                        </div>
-                        <input type="text" name="Twitter"
-                               value="<?= htmlentities(stripslashes($sTwitter), ENT_NOQUOTES, 'UTF-8') ?>" size="30"
-                               maxlength="100" class="form-control">
-                        <?php if ($sTwitterError) {
-                            ?><font
-                            color="red"><?php echo $sTwitterError ?></font></td><?php
-                        } ?>
-                    </div>
-                </div>
-                <div class="form-group col-md-4">
-                      <label for="LinkedIn"><?= gettext('LinkedIn') ?>:</label>
-                      <div class="input-group">
-                          <div class="input-group-addon">
-                              <i class="fa fa-linkedin"></i>
-                          </div>
-                          <input type="text" name="LinkedIn"
-                                 value="<?= htmlentities(stripslashes($sLinkedIn), ENT_NOQUOTES, 'UTF-8') ?>" size="30"
-                                 maxlength="100" class="form-control">
-                          <?php if ($sLinkedInError) {
-                            ?><font
-                              color="red"><?php echo $sLinkedInError ?></font></td><?php
-                        } ?>
-                      </div>
-                  </div>
-            </div>
+
+          <!-- Deleted: Facebook, Twitter, and Linkedin -->
         </div>
     </div>
     <div class="box box-info clearfix">
@@ -1182,24 +1107,6 @@ require 'Include/Header.php';
                         } ?>
                     </div>
                 </div>
-              <?php if (!SystemConfig::getBooleanValue('bHideFriendDate')) { /* Friend Date can be hidden - General Settings */ ?>
-                <div class="form-group col-md-3 col-lg-3">
-                  <label><?= gettext('Friend Date') ?>:</label>
-                  <div class="input-group">
-                    <div class="input-group-addon">
-                      <i class="fa fa-calendar"></i>
-                    </div>
-                    <input type="text" name="FriendDate" class="form-control date-picker"
-                           value="<?= change_date_for_place_holder($dFriendDate) ?>" maxlength="10" id="sel2" size="10"
-                           placeholder="<?= SystemConfig::getValue("sDatePickerPlaceHolder") ?>">
-                    <?php if ($sFriendDateError) {
-                            ?><font
-                      color="red"><?php echo $sFriendDateError ?></font><?php
-                        } ?>
-                  </div>
-                </div>
-              <?php
-                        } ?>
             </div>
         </div>
     </div>

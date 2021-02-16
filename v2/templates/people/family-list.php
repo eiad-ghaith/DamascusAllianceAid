@@ -30,16 +30,14 @@ include SystemURLs::getDocumentRoot() . '/Include/Header.php';
         <table id="families" class="table table-striped table-bordered data-table" cellspacing="0" width="100%">
             <thead>
             <tr>
-                <th><?= gettext('Actions') ?></th>
-                <th><?= gettext('Name') ?></th>
-                <th><?= gettext('Address') ?></th>
-                <th><?= gettext('Home Phone') ?></th>
-                <th><?= gettext('Cell Phone') ?></th>
-                <th><?= gettext('Email') ?></th>
-                <th><?= gettext('Created') ?></th>
-                <th><?= gettext('Edited') ?></th>
-                <th><?= gettext('chose') ?></th>
-                <th><?= gettext('Address Additional Info') ?></th>
+                <?php 
+                    foreach ($familyAttributes as $attribute) {
+                    /* @var $familyAttributes ChurchCRM\family.php */
+                ?>
+                  <th><?= gettext($attribute) ?></th>
+                <?php
+                }
+                ?>
             </tr>
             </thead>
             <tbody>
@@ -66,9 +64,6 @@ include SystemURLs::getDocumentRoot() . '/Include/Header.php';
                 <td> <?= $family->getAddress() ?></td>
                 <td> <?= $family->getHomePhone() ?></td>
                 <td> <?= $family->getCellPhone() ?></td>
-                <td> <?= $family->getEmail() ?></td>
-                <td> <?= date_format($family->getDateEntered(), SystemConfig::getValue('sDateFormatLong')) ?></td>
-                <td> <?= date_format($family->getDateLastEdited(), SystemConfig::getValue('sDateFormatLong')) ?></td>
                <!-- todo: Select custom list options from an array -->
                <!-- todo: Select custom list for Address Additional Info -->
                <!-- todo: Select custom list for Additional Info -->
